@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { CiDark, CiLight } from "react-icons/ci";
 const Header = () => {
   const [theme, setTheme] = useState("light");
 
@@ -15,7 +15,7 @@ const Header = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <nav className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-slate-800">
+    <nav className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80">
       <div className="container">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center lg:px-0">
@@ -49,18 +49,11 @@ const Header = () => {
           </div>
           <div className="flex space-x-2 lg:hidden">
             <div className="ml-auto flex flex-shrink-0 items-center p-1 text-gray-400 hover:text-white focus:outline-none">
-              <div className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 16 16"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
-                </svg>
+              <div
+                className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw dark:text-white "
+                onClick={handleDark}
+              >
+                {theme === "dark" ? <CiDark /> : <CiLight />}
               </div>
             </div>
             <button
@@ -139,34 +132,35 @@ const Header = () => {
             <div className="hidden lg:ml-4 lg:block">
               <div className="flex items-center space-x-4">
                 <div
-                  className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw"
+                  className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw dark:text-white "
                   onClick={handleDark}
                 >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
-                  </svg>
+                  {theme === "dark" ? <CiLight /> : <CiDark />}
                 </div>
                 <div>
                   <div className="flex space-x-3">
                     <a
-                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio"
+                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio px-5 py-2 text-white"
                       type="button"
                       href="/login"
                     >
                       <div className="mantine-3xbgk5 mantine-Button-inner">
                         <span className="mantine-qo1k2 mantine-Button-label">
-                          লগইন
+                          Login
                         </span>
                       </div>
                     </a>{" "}
+                    <a
+                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio px-5 py-2 text-white"
+                      type="button"
+                      href="/login"
+                    >
+                      <div className="mantine-3xbgk5 mantine-Button-inner">
+                        <span className="mantine-qo1k2 mantine-Button-label">
+                          Registration
+                        </span>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
