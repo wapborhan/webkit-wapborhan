@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleDark = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
-    <nav class="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80">
-      <div class="container">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="flex items-center lg:px-0">
-            <div class="flex flex-shrink-0 items-center">
-              <a class="flex items-center" href="/">
+    <nav className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-slate-800">
+      <div className="container">
+        <div className="relative flex h-16 items-center justify-between">
+          <div className="flex items-center lg:px-0">
+            <div className="flex flex-shrink-0 items-center">
+              <a className="flex items-center" href="/">
                 <span
                 //  style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
                 >
@@ -34,13 +47,13 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div class="flex space-x-2 lg:hidden">
-            <div class="ml-auto flex flex-shrink-0 items-center p-1 text-gray-400 hover:text-white focus:outline-none">
-              <div class="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw">
+          <div className="flex space-x-2 lg:hidden">
+            <div className="ml-auto flex flex-shrink-0 items-center p-1 text-gray-400 hover:text-white focus:outline-none">
+              <div className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw">
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 16 16"
                   height="1em"
                   width="1em"
@@ -51,25 +64,25 @@ const Header = () => {
               </div>
             </div>
             <button
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none"
               id="headlessui-disclosure-button-:R396:"
               type="button"
               aria-expanded="false"
             >
               <a
-                class="mantine-UnstyledButton-root mantine-Burger-root h-auto mantine-7qp4sr"
+                className="mantine-UnstyledButton-root mantine-Burger-root h-auto mantine-7qp4sr"
                 title="Open navigation"
               >
-                <div class="mantine-1asblv6 mantine-Burger-burger"></div>
+                <div className="mantine-1asblv6 mantine-Burger-burger"></div>
               </a>
             </button>
           </div>
-          <div class="hidden lg:flex lg:items-center lg:space-x-8">
-            <div class="flex space-x-2">
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            <div className="flex space-x-2">
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 href="/"
               >
                 হোম
@@ -77,7 +90,7 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#features"
               >
                 ফিচার্স
@@ -85,7 +98,7 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#modules"
               >
                 মডিউলস
@@ -93,7 +106,7 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#projects"
               >
                 প্রজেক্টস
@@ -101,7 +114,7 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#process"
               >
                 কিভাবে চলবে
@@ -109,7 +122,7 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#why-course"
               >
                 কেন করবেন
@@ -117,19 +130,22 @@ const Header = () => {
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
-                class="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#support"
               >
                 সাপোর্ট
               </a>
             </div>
-            <div class="hidden lg:ml-4 lg:block">
-              <div class="flex items-center space-x-4">
-                <div class="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw">
+            <div className="hidden lg:ml-4 lg:block">
+              <div className="flex items-center space-x-4">
+                <div
+                  className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw"
+                  onClick={handleDark}
+                >
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 16 16"
                     height="1em"
                     width="1em"
@@ -139,14 +155,14 @@ const Header = () => {
                   </svg>
                 </div>
                 <div>
-                  <div class="flex space-x-3">
+                  <div className="flex space-x-3">
                     <a
-                      class="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio"
+                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio"
                       type="button"
                       href="/login"
                     >
-                      <div class="mantine-3xbgk5 mantine-Button-inner">
-                        <span class="mantine-qo1k2 mantine-Button-label">
+                      <div className="mantine-3xbgk5 mantine-Button-inner">
+                        <span className="mantine-qo1k2 mantine-Button-label">
                           লগইন
                         </span>
                       </div>
