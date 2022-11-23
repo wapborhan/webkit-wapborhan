@@ -78,7 +78,7 @@ const Header = () => {
                 className="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 href="/"
               >
-                হোম
+                Home
               </a>
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -86,7 +86,7 @@ const Header = () => {
                 className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#features"
               >
-                ফিচার্স
+                Playground
               </a>
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -94,7 +94,7 @@ const Header = () => {
                 className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#modules"
               >
-                মডিউলস
+                Converter
               </a>
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -102,7 +102,7 @@ const Header = () => {
                 className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#projects"
               >
-                প্রজেক্টস
+                Formatter
               </a>
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -110,23 +110,7 @@ const Header = () => {
                 className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
                 href="/#process"
               >
-                কিভাবে চলবে
-              </a>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#why-course"
-              >
-                কেন করবেন
-              </a>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#support"
-              >
-                সাপোর্ট
+                Generator
               </a>
             </div>
             <div className="hidden lg:ml-4 lg:block">
