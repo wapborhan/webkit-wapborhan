@@ -22,7 +22,8 @@ const Header = () => {
             <div className="flex flex-shrink-0 items-center">
               <a className="flex items-center" href="/">
                 <span
-                //  style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
+                  className="text-white"
+                  //  style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
                 >
                   <span
                   //  style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"
