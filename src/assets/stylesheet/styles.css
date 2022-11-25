@@ -4777,11 +4777,11 @@ button {
   }
 }
 @media (min-width: 769px) {
-  .mantine-1wnnyej {
+  /* .mantine-1wnnyej {
     flex-basis: 50%;
     flex-shrink: 0;
     max-width: 50%;
-  }
+  } */
 }
 
 .mantine-nsdj {

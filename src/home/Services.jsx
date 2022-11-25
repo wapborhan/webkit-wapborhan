@@ -3,7 +3,7 @@ import React from "react";
 const Services = () => {
   return (
     <section
-      className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-none lg:bg-shape2_filpped"
+      className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
       id="features"
     >
       <div className="container relative space-y-14">
