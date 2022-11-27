@@ -1,4 +1,6 @@
 import React from "react";
+import BannerIMG from "../assets/img/banner.png";
+import CodeIMG from "../assets/img/code.png";
 
 const Banner = () => {
   return (
@@ -17,6 +19,7 @@ const Banner = () => {
               <div className="flex flex-col space-y-4 text-center lg:text-left">
                 <div>
                   <span
+
                   // style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
                   >
                     <span
@@ -31,53 +34,48 @@ const Banner = () => {
                     </span>
                     <img
                       alt="Redux Logo"
-                      srcset="/_next/static/media/redux.9b734afa.svg 1x, /_next/static/media/redux.9b734afa.svg 2x"
-                      src="/_next/static/media/redux.9b734afa.svg"
+                      // srcset={CodeIMG}
+                      src={CodeIMG}
                       decoding="async"
                       data-nimg="intrinsic"
-                      className="brightness-110"
+                      className="brightness-110 h-20 w-100 items-center inline-block"
                       // style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
                     />
                   </span>
                 </div>
-                <h2 className="text-link text-normal font-semibold">
+                {/* <h2 className="text-link text-normal font-semibold">
                   বাংলা রিয়্যাক্ট-রিডাক্স কোর্স
-                </h2>
+                </h2> */}
                 <h1 className="hero-title dark:text-white">
-                  Free Online Tools For Developers থিংক ইন এ{" "}
-                  <span className="primary-highlighter">রিডাক্স</span> ওয়ে
+                  Free Online
+                  <span className="primary-highlighter">Tools</span> For
+                  Developers
                 </h1>
-                <h2 className="subtitle">
-                  রিডাক্স টুলকিট, আর.টি.কে কুয়ারি এবং থাংক
-                </h2>
+                <h2 className="subtitle">Converter, Formatter and Generator</h2>
               </div>
               <p className="text-1 text-medium text-center lg:text-left">
-                রিডাক্স এর মৌলিক এবং আবশ্যিক বিষয়সমূহ বুঝার পাশাপাশি এই কোর্সের
-                প্রজেক্ট ভিত্তিক শেখানোর পদ্ধতি আপনাকে একজন দক্ষ রিডাক্স
-                প্রোগ্রামার হয়ে উঠতে সাহায্য করবে বলে আমাদের বিশ্বাস।
+                I created this website to help developers by providing them with
+                free online tools. These tools include several formatters,
+                validators, code minifiers, string escapers, encoders and
+                decoders, message digesters, web resources and more.
               </p>
-              <div className="mx-auto flex gap-4 lg:mx-0">
-                <div className="hidden lg:block">
-                  <button
-                    className="mantine-Button-default bg-0 text-1 hover:bg-1 border-general mantine-Button-root mantine-1fotj4d"
-                    type="button"
-                    href="/courses/think-in-a-redux-way/introduction"
-                  >
-                    <div className="mantine-3xbgk5 mantine-Button-inner">
-                      <span className="mantine-qo1k2 mantine-Button-label">
-                        ইন্ট্রো ভিডিও দেখুন
-                      </span>
-                    </div>
-                  </button>
-                </div>
-              </div>
             </div>
-            <div className="relative flex w-full items-center justify-center">
+            <div className="relative flex w-full items-center justify-center mt-20">
+              <img src={BannerIMG} alt="Banner" />
               <div
                 className="transion-all absolute inset-0 left-80 top-64 duration-1000 ease-in-out"
                 id="cursor"
                 // style="top: 50px; left: 144px; opacity: 0;"
               ></div>
+            </div>
+          </div>
+          <div className="mx-auto flex justify-center text-center mt-10 gap-4 lg:mx-0">
+            <div className="hidden lg:block">
+              <a href="#features">
+                <div class="scroll-container">
+                  <div class="scroller"></div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

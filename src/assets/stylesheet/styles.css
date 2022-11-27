@@ -4793,3 +4793,49 @@ button {
   -webkit-box-align: stretch;
   align-items: stretch;
 }
+
+/*  */
+
+.scroll-container {
+  width: 30px;
+  height: 60px;
+  border: 3px solid #6d28d9;
+  border-radius: 15px;
+  position: relative;
+}
+.dark .scroll-container {
+  border: 3px solid #38bdf8;
+}
+.dark .scroller {
+  background-color: #38bdf8;
+}
+.scroller {
+  width: 16px;
+  border-radius: 8px;
+  background-color: #6d28d9;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 34px;
+  animation: scroller 1500ms ease-out infinite;
+}
+
+@keyframes scroller {
+  0% {
+    bottom: 34px;
+  }
+  5% {
+    top: 4px;
+  }
+  32% {
+    bottom: 4px;
+  }
+  66% {
+    top: 34px;
+    bottom: 4px;
+  }
+  100% {
+    top: 4px;
+    bottom: 34px;
+  }
+}
