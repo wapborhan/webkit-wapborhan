@@ -44,8 +44,8 @@ const Banner = () => {
                   বাংলা রিয়্যাক্ট-রিডাক্স কোর্স
                 </h2>
                 <h1 className="hero-title dark:text-white">
-                  থিংক ইন এ <span className="primary-highlighter">রিডাক্স</span>{" "}
-                  ওয়ে
+                  Free Online Tools For Developers থিংক ইন এ{" "}
+                  <span className="primary-highlighter">রিডাক্স</span> ওয়ে
                 </h1>
                 <h2 className="subtitle">
                   রিডাক্স টুলকিট, আর.টি.কে কুয়ারি এবং থাংক
