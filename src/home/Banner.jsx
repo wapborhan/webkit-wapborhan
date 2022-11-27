@@ -72,8 +72,8 @@ const Banner = () => {
           <div className="mx-auto flex justify-center text-center mt-10 gap-4 lg:mx-0">
             <div className="hidden lg:block">
               <a href="#features">
-                <div class="scroll-container">
-                  <div class="scroller"></div>
+                <div className="scroll-container">
+                  <div className="scroller"></div>
                 </div>
               </a>
             </div>
