@@ -42,6 +42,17 @@ const Services = () => {
           </h1>
           <p className="subtitle">এই কোর্সে যা যা থাকছে</p>
         </div>
+
+        <div className="catt-title">
+          <h3>
+            Some <span className="txt-success">Projects</span> I've Build By
+          </h3>
+          <div className="text-right">
+            <a className="rn-btn btn-brd mr--30">
+              <span>React</span>
+            </a>
+          </div>
+        </div>
         <div className="rounded-1 shadow-1 border-general relative mx-auto divide-y border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl">
           <div className="flex flex-row mantine-Grid-root mantine-nsdj">
             <div className="mantine-Col-root border-general border-r-0 border-b md:border-r mantine-1wnnyej">
