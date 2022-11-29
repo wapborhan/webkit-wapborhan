@@ -1,15 +1,15 @@
 import React from "react";
 
-const PlayGround = () => {
+const Converter = () => {
   return (
-    <div className="playground">
+    <div className="converter">
       <div className="catt-title mb-10">
         <h3>
           Online <span className="txt-success">Tools</span> On
         </h3>
         <div className="text-right">
           <a className="rn-btn btn-brd mr--30">
-            <span>Playground</span>
+            <span>Converter</span>
           </a>
         </div>
       </div>
@@ -19,7 +19,7 @@ const PlayGround = () => {
             I
           </div>
           <h2 className="text-normal text-0 mx-0 mb-8 mt-8 box-border border-0 border-solid border-gray-200 text-center font-medium">
-            HTML PlayGround
+            HTML to Markdown
           </h2>
 
           <div className="mt-4 text-center">
@@ -59,7 +59,7 @@ const PlayGround = () => {
             I
           </div>
           <h2 className="text-normal text-0 mx-0 mb-8 mt-8 box-border border-0 border-solid border-gray-200 text-center font-medium">
-            CSS PlayGround
+            Markdown to HTML
           </h2>
 
           <div className="mt-4 text-center">
@@ -99,7 +99,7 @@ const PlayGround = () => {
             I
           </div>
           <h2 className="text-normal text-0 mx-0 mb-8 mt-8 box-border border-0 border-solid border-gray-200 text-center font-medium">
-            JavaScript PlayGround
+            Code to Image
           </h2>
 
           <div className="mt-4 text-center">
@@ -139,4 +139,4 @@ const PlayGround = () => {
   );
 };
 
-export default PlayGround;
+export default Converter;
