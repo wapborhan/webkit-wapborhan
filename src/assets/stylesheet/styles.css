@@ -3110,6 +3110,9 @@ video {
     #f8fafc 97.95%
   );
 }
+.dark .gradient-primary{
+background: transparent;
+}
 .nextjs-image span span {
   display: none !important;
 }
@@ -4862,10 +4865,10 @@ button {
 
 .catt-title .text-right {
   text-align: right !important;
-  z-index: 100;
+  z-index: 10;
 }
 
- .catt-title .text-right:before {
+.catt-title .text-right:before {
   background-color: #6d28d9;
   content: "";
   display: block;
@@ -4923,4 +4926,39 @@ a:before {
   content: "";
   position: absolute;
   transition: 0.5s;
+}
+.mantine-7a5dwr {
+    border: 1px solid rgb(121, 80, 242);
+    background-color: transparent;
+    color: rgb(121, 80, 242);
+    height: 30px;
+    padding: 0px 14px 0px 14px;
+    font-family: "Hind Siliguri", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: auto;
+    border-radius: 32px;
+    font-weight: 600;
+    position: relative;
+    line-height: 1;
+    font-size: 12px;
+    user-select: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+}
+.mantine-3xbgk5 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    overflow: visible;
+}.mantine-1g4orza {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 10px;
 }
