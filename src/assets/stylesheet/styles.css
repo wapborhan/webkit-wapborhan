@@ -3110,8 +3110,8 @@ video {
     #f8fafc 97.95%
   );
 }
-.dark .gradient-primary{
-background: transparent;
+.dark .gradient-primary {
+  background: transparent;
 }
 .nextjs-image span span {
   display: none !important;
@@ -4858,9 +4858,17 @@ button {
   font-size: 1.75rem;
   margin: 0;
 }
+
+.dark .catt-title h3 {
+  color: #fff;
+}
 .txt-success {
   color: #6d28d9;
   font-weight: 400;
+}
+
+.dark .txt-success {
+  color: #06b6d4;
 }
 
 .catt-title .text-right {
@@ -4879,8 +4887,19 @@ button {
   width: 90%;
   z-index: -1;
 }
+.dark .catt-title .text-right:before {
+  background-color: #06b6d4;}
 .catt-title .text-right .btn-brd {
   border: 1px solid #6d28d9;
+}
+
+.dark .catt-title .text-right .btn-brd {
+  border: 1px solid #06b6d4;
+}
+
+.dark a.rn-btn,
+.dark button.rn-btn {
+  background: linear-gradient(145deg, #06b6d4, #0ea5e9);
 }
 a.rn-btn,
 button.rn-btn {
@@ -4928,37 +4947,38 @@ a:before {
   transition: 0.5s;
 }
 .mantine-7a5dwr {
-    border: 1px solid rgb(121, 80, 242);
-    background-color: transparent;
-    color: rgb(121, 80, 242);
-    height: 30px;
-    padding: 0px 14px 0px 14px;
-    font-family: "Hind Siliguri", sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    display: inline-block;
-    width: auto;
-    border-radius: 32px;
-    font-weight: 600;
-    position: relative;
-    line-height: 1;
-    font-size: 12px;
-    user-select: none;
-    box-sizing: border-box;
-    text-decoration: none;
-    cursor: pointer;
-    appearance: none;
+  border: 1px solid rgb(121, 80, 242);
+  background-color: transparent;
+  color: rgb(121, 80, 242);
+  height: 30px;
+  padding: 0px 14px 0px 14px;
+  font-family: "Hind Siliguri", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: auto;
+  border-radius: 32px;
+  font-weight: 600;
+  position: relative;
+  line-height: 1;
+  font-size: 12px;
+  user-select: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
 }
 .mantine-3xbgk5 {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    height: 100%;
-    overflow: visible;
-}.mantine-1g4orza {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-right: 10px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+  overflow: visible;
+}
+.mantine-1g4orza {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 10px;
 }
