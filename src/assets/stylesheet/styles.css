@@ -4851,12 +4851,14 @@ button {
   grid-template-columns: auto 1fr;
   line-height: 0;
   margin-top: 60px;
+width: 60%;
 }
 
 .catt-title h3 {
   color: #000;
   font-size: 1.75rem;
   margin: 0;
+line-height: 1;
 }
 
 .dark .catt-title h3 {

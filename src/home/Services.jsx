@@ -46,7 +46,12 @@ const Services = () => {
           <p className="subtitle">এই কোর্সে যা যা থাকছে</p>
         </div>
       </div>
-      <PlayGround />
+      <div className="container">
+        <div className="gradient-primary rounded-1 shadow-1 border-general relative mx-auto  border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl ">
+          {" "}
+          <PlayGround />
+        </div>
+      </div>
     </section>
   );
 };
