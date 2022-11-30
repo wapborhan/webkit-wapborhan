@@ -2,6 +2,8 @@ import React from "react";
 import PlayGround from "./services/PlayGround";
 import ToolsLight from "../assets/img/tools-light.png";
 import Converter from "./services/Converter";
+import Formatter from "./services/Formatter";
+import Generator from "./services/Generator";
 
 const Services = () => {
   return (
@@ -9,7 +11,7 @@ const Services = () => {
       className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
       id="features"
     >
-      <div className="container relative space-y-14">
+      <div className="container relative space-y-14  mb-10">
         <div className="w-full text-center">
           <div className="flex h-full w-full items-center justify-center">
             <div
@@ -48,10 +50,12 @@ const Services = () => {
         </div>
       </div>
       <div className="container">
-        <div className="gradient-primary rounded-1 shadow-1 border-general relative mx-auto  border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl ">
+        <div className="gradient-primary rounded-1 shadow-1 border-general relative mx-auto  border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl">
           {" "}
           <PlayGround />
           <Converter />
+          <Formatter />
+          <Generator />
         </div>
       </div>
     </section>

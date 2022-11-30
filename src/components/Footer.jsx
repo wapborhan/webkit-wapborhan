@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+  const d = new Date();
   return (
     <footer className="wrapper border-general border-t !pb-4 dark:bg-slate-900">
       <div className="container">
@@ -28,7 +29,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="my-6 flex flex-col-reverse items-center justify-between gap-6 text-sm lg:flex-row">
+        {/* <div className="my-6 flex flex-col-reverse items-center justify-between gap-6 text-sm lg:flex-row">
           <div className="flex flex-wrap justify-center gap-4 text-slate-600 dark:text-slate-500 lg:flex-row lg:space-x-5">
             <a
               className="hover:text-slate-text-slate-700 dark:hover:text-slate-400"
@@ -63,30 +64,25 @@ const Footer = () => {
               যোগাযোগ
             </a>
           </div>
-        </div>
+        </div> */}
         <div className="mantine-Divider-root mantine-Divider-horizontal hidden !border-slate-900/10 dark:!border-slate-300/10 lg:block mantine-p7exr"></div>
         <div className="mt-4 flex flex-col-reverse items-center justify-between gap-2 text-slate-600 dark:text-slate-500 lg:my-6 lg:flex-row">
           <p className="text-small mt-2 text-center lg:text-left">
-            কপিরাইট ©2022লার্ন উইথ সুমিত। সর্বস্বত্ব সংরক্ষিত।
+            Copyright © {d.getFullYear()} Webkit - WapBorhan । All rights
+            reserved.
           </p>
           <div className="flex space-x-5 text-sm text-slate-600 dark:text-slate-500 ">
             <a
               className="hover:text-slate-text-slate-700 dark:hover:text-slate-400"
-              href="/supported-browsers"
-            >
-              সাপোর্টেড ব্রাউজারস
-            </a>
-            <a
-              className="hover:text-slate-text-slate-700 dark:hover:text-slate-400"
               href="/terms"
             >
-              শর্তাবলি
+              Terms
             </a>
             <a
               className="hover:text-slate-text-slate-700 dark:hover:text-slate-400"
               href="/privacy-policy"
             >
-              প্রাইভেসি পলিসি
+              Privacy Policy
             </a>
           </div>
         </div>
