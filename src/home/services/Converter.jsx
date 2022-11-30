@@ -3,12 +3,12 @@ import React from "react";
 const Converter = () => {
   return (
     <div className="converter">
-      <div className="catt-title mb-10">
+      <div className="catt-title mb-10 w-100 md:w-60">
         <h3>
           Online <span className="txt-success">Tools</span> On
         </h3>
         <div className="text-right">
-          <a className="rn-btn btn-brd mr--30">
+          <a className="rn-btn btn-brd ">
             <span>Converter</span>
           </a>
         </div>

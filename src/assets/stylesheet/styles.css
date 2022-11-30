@@ -357,11 +357,13 @@ video {
   .container {
     max-width: 768px;
   }
+
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
+
 }
 @media (min-width: 1280px) {
   .container {
@@ -4851,7 +4853,7 @@ button {
   grid-template-columns: auto 1fr;
   line-height: 0;
   margin-top: 60px;
-width: 60%;
+
 }
 
 .catt-title h3 {
