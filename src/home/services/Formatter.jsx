@@ -3,7 +3,7 @@ import React from "react";
 const Formatter = () => {
   return (
     <div className="formatter">
-      <div className="catt-title mb-10">
+      <div className="catt-title mb-10 w-100 md:w-60">
         <h3>
           Online <span className="txt-success">Tools</span> On
         </h3>
