@@ -1,12 +1,12 @@
 import React from "react";
 
-const PlayGround = () => {
+const PlayGround = (props) => {
   return (
     <div className="playground">
-      <div className="catt-title mb-10 w-100 md:w-60">
-        <div className="text-right">
+      <div className="catt-title ">
+        <div className="text-left">
           <a className="rn-btn btn-brd mr--30">
-            <span>Playground</span>
+            <span>{props.title}</span>
           </a>
         </div>
       </div>

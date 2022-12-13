@@ -1,15 +1,12 @@
 import React from "react";
 
-const Formatter = () => {
+const Formatter = (props) => {
   return (
     <div className="formatter">
-      <div className="catt-title mb-10 w-100 md:w-60">
-        <h3>
-          Online <span className="txt-success">Tools</span> On
-        </h3>
-        <div className="text-right">
+      <div className="catt-title ">
+        <div className="text-left">
           <a className="rn-btn btn-brd mr--30">
-            <span>Formatter</span>
+            <span>{props.title}</span>
           </a>
         </div>
       </div>

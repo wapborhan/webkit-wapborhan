@@ -1,15 +1,12 @@
 import React from "react";
 
-const Converter = () => {
+const Converter = (props) => {
   return (
     <div className="converter">
-      <div className="catt-title mb-10 w-100 md:w-60">
-        <h3>
-          Online <span className="txt-success">Tools</span> On
-        </h3>
-        <div className="text-right">
-          <a className="rn-btn btn-brd ">
-            <span>Converter</span>
+      <div className="catt-title ">
+        <div className="text-left">
+          <a className="rn-btn btn-brd mr--30">
+            <span>{props.title}</span>
           </a>
         </div>
       </div>

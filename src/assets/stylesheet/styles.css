@@ -4847,12 +4847,12 @@ button {
 /*  */
 
 .catt-title {
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
   align-items: center;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  /* display: grid;
+  grid-template-columns: auto 1fr; */
   line-height: 0;
-  margin-top: 60px;
+  margin: 30px 0 ;
 
 }
 
@@ -4875,12 +4875,12 @@ line-height: 1;
   color: #06b6d4;
 }
 
-.catt-title .text-right {
-  text-align: right !important;
+.catt-title .text-lift {
+  text-align: left !important;
   z-index: 10;
 }
 
-.catt-title .text-right:before {
+.catt-title .text-left:before {
   background-color: #6d28d9;
   content: "";
   display: block;
@@ -4888,12 +4888,12 @@ line-height: 1;
   position: relative;
   right: 0;
   top: 15px;
-  width: 90%;
-  z-index: -1;
+  width: 100%;
+  z-index: 1;
 }
-.dark .catt-title .text-right:before {
+.dark .catt-title .text-left:before {
   background-color: #06b6d4;}
-.catt-title .text-right .btn-brd {
+.catt-title .text-left .btn-brd {
   border: 1px solid #6d28d9;
 }
 
