@@ -1,11 +1,9 @@
 import React from "react";
-import PlayGround from "./services/PlayGround";
 import ToolsLight from "../assets/img/tools-light.png";
-import Converter from "./services/Converter";
-import Formatter from "./services/Formatter";
-import Generator from "./services/Generator";
+import SerItem from "./SerItem";
 
-const Services = () => {
+const Services = (props) => {
+  // console.log(props.data);
   return (
     <section
       className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
@@ -49,10 +47,7 @@ const Services = () => {
       </div>
       <div className="container">
         <div className="gradient-primary rounded-1 shadow-1 border-general relative mx-auto  border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl">
-          <PlayGround title="Playground" />
-          <Converter title="Converter" />
-          <Formatter title="Formatter" />
-          <Generator title="Generator" />
+          <SerItem data={props.data} />
         </div>
       </div>
     </section>

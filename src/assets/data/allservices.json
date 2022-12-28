@@ -2,21 +2,85 @@
   "services": [
     {
       "name": "Playground",
+      "link": "",
       "sub_cat": [
         {
           "color": "",
           "icon": "",
-          "title": "HTML"
+          "title": "HTML PlayGround"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "CSS PlayGround"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "JavaScript PlayGround"
         }
       ]
     },
     {
       "name": "Converter",
+      "link": "",
       "sub_cat": [
         {
           "color": "",
           "icon": "",
-          "title": "Json"
+          "title": "HTML to Markdown"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "Markdown to HTML"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "Code to Image"
+        }
+      ]
+    },
+    {
+      "name": "Formatter",
+      "link": "",
+      "sub_cat": [
+        {
+          "color": "",
+          "icon": "",
+          "title": "HTML Minify"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "CSS Minify"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "Javascript Minify"
+        }
+      ]
+    },
+    {
+      "name": "Generator",
+      "link": "",
+      "sub_cat": [
+        {
+          "color": "",
+          "icon": "",
+          "title": "Password Generatter"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "MD5 Hash Generator"
+        },
+        {
+          "color": "",
+          "icon": "",
+          "title": "SHA1 Hash Generator"
         }
       ]
     }
