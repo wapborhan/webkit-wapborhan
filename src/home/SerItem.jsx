@@ -21,7 +21,10 @@ const SerItem = (props) => {
                     className="border-general rounded-1  bg-0 border p-8 transition-all shadow"
                     key={Math.random()}
                   >
-                    <div className="bg-orange-600 mx-auto flex h-12 w-12 items-center justify-center rounded-full">
+                    <div
+                      className=" mx-auto flex h-12 w-12 items-center justify-center rounded-full"
+                      style={{ backgroundColor: `${subitem.color}` }}
+                    >
                       I
                     </div>
                     <h2 className="text-normal text-0 mx-0 mb-8 mt-8 box-border border-0 border-solid border-gray-200 text-center font-medium">
@@ -32,7 +35,7 @@ const SerItem = (props) => {
                       <a
                         className="mantine-Button-outline mantine-Button-root mantine-7a5dwr"
                         type="button"
-                        href="#"
+                        href={subitem.link}
                         target="_blank"
                       >
                         <div className="mantine-3xbgk5 mantine-Button-inner">

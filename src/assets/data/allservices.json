@@ -2,33 +2,37 @@
   "services": [
     {
       "name": "Playground",
-      "link": "",
+      "link": "/playground",
       "sub_cat": [
         {
-          "color": "",
+          "color": "#ff5722",
           "icon": "",
-          "title": "HTML PlayGround"
+          "title": "HTML PlayGround",
+          "link": "/html-playground"
         },
         {
-          "color": "",
+          "color": "#2257ea",
           "icon": "",
-          "title": "CSS PlayGround"
+          "title": "CSS PlayGround",
+          "link": "/css-playground"
         },
         {
-          "color": "",
+          "color": "#f5d235",
           "icon": "",
-          "title": "JavaScript PlayGround"
+          "title": "JavaScript PlayGround",
+          "link": "/js-playground"
         }
       ]
     },
     {
       "name": "Converter",
-      "link": "",
+      "link": "converter",
       "sub_cat": [
         {
           "color": "",
           "icon": "",
-          "title": "HTML to Markdown"
+          "title": "HTML to Markdown",
+          "link": "/html-to-markdown"
         },
         {
           "color": "",
@@ -44,7 +48,7 @@
     },
     {
       "name": "Formatter",
-      "link": "",
+      "link": "formatter",
       "sub_cat": [
         {
           "color": "",
@@ -65,7 +69,7 @@
     },
     {
       "name": "Generator",
-      "link": "",
+      "link": "generator",
       "sub_cat": [
         {
           "color": "",
