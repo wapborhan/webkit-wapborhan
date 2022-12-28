@@ -14,9 +14,7 @@ const Services = () => {
       <div className="container relative space-y-14  mb-10">
         <div className="w-full text-center">
           <div className="flex h-full w-full items-center justify-center">
-            <div
-            //  style="opacity: 1; transform: none;"
-            >
+            <div>
               <span
               // style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
               >
