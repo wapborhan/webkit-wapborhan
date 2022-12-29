@@ -1,10 +1,13 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
+import DATA from "../assets/data/allservices.json";
 import { NavLink } from "react-router-dom";
 
-const SerItem = (props) => {
+const SerItem = () => {
+  const [data, setData] = useState(DATA);
+  console.log(data.services);
   return (
     <Fragment>
-      {props.data.map((item) => {
+      {data.services.map((item) => {
         return (
           <div className="playground" key={Math.random()}>
             <div className="catt-title ">
@@ -16,7 +19,7 @@ const SerItem = (props) => {
             </div>
             <div className="grid w-full gap-4 lg:grid-cols-3">
               {item.sub_cat.map((subitem) => {
-                console.log(subitem);
+                // console.log(subitem);
                 return (
                   <div
                     className="border-general rounded-1  bg-0 border p-8 transition-all shadow"

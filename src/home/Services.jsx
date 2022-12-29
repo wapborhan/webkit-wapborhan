@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ToolsLight from "../assets/img/tools-light.png";
+import DATA from "../assets/data/allservices.json";
 import SerItem from "./SerItem";
 
-const Services = (props) => {
+const Services = () => {
   // console.log(props.data);
+
   return (
     <section
       className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
@@ -47,7 +49,7 @@ const Services = (props) => {
       </div>
       <div className="container">
         <div className="gradient-primary rounded-1 shadow-1 border-general relative mx-auto  border bg-white p-8 dark:bg-slate-800/[0.6] xl:max-w-6xl">
-          <SerItem data={props.data} />
+          <SerItem />
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CiDark, CiLight } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
+
 const Header = () => {
   const [theme, setTheme] = useState("light");
 
@@ -73,14 +75,14 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             <div className="flex space-x-2">
-              <a
+              <NavLink
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
                 className="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                href="/"
+                to="/"
               >
                 Home
-              </a>
+              </NavLink>
               <a
                 current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
                 default=""
