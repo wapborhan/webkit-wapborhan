@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 const SerItem = (props) => {
   return (
@@ -32,11 +33,10 @@ const SerItem = (props) => {
                     </h2>
 
                     <div className="mt-4 text-center">
-                      <a
+                      <NavLink
                         className="mantine-Button-outline mantine-Button-root mantine-7a5dwr"
                         type="button"
-                        href={subitem.link}
-                        target="_blank"
+                        to={subitem.link}
                       >
                         <div className="mantine-3xbgk5 mantine-Button-inner">
                           <span className="mantine-Button-icon mantine-Button-leftIcon mantine-1g4orza">
@@ -60,7 +60,7 @@ const SerItem = (props) => {
                             এখান থেকে শিখুন
                           </span>
                         </div>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 );
