@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ToolsLight from "../assets/img/tools-light.png";
-import DATA from "../assets/data/allservices.json";
 import SerItem from "./SerItem";
 
 const Services = () => {
-  // console.log(props.data);
-
   return (
     <section
       className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
