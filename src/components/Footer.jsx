@@ -68,8 +68,8 @@ const Footer = () => {
         <div className="mantine-Divider-root mantine-Divider-horizontal hidden !border-slate-900/10 dark:!border-slate-300/10 lg:block mantine-p7exr"></div>
         <div className="mt-4 flex flex-col-reverse items-center justify-between gap-2 text-slate-600 dark:text-slate-500 lg:my-6 lg:flex-row">
           <p className="text-small mt-2 text-center lg:text-left">
-            Copyright © {d.getFullYear()} Webkit - WapBorhan । All rights
-            reserved.
+            Copyright © {d.getFullYear() + " "}
+            &#9829; Webkit - WapBorhan । All rights reserved.
           </p>
           <div className="flex space-x-5 text-sm text-slate-600 dark:text-slate-500 ">
             <a
