@@ -1,9 +1,8 @@
 import { Fragment, Component } from "react";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Homepage from "./home/Homepage";
-import NotFound from "./components/NotFound";
+import { routes } from "./routes/routes";
+import Footer from "./components/Footer";
 
 export default class App extends Component {
   render() {
@@ -11,8 +10,14 @@ export default class App extends Component {
       <Fragment>
         <Header />
         <Routes>
-          <Route path="/" exact element={<Homepage />} />
-          <Route path="*" exact element={<NotFound />} />
+          {routes.map((data, i) => (
+            <Route
+              key={i}
+              exact
+              path={`/${data.url}`}
+              element={data.component}
+            />
+          ))}
         </Routes>
         <Footer />
       </Fragment>

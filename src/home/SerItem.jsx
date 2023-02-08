@@ -1,13 +1,13 @@
 import React, { useState, Fragment } from "react";
-import DATA from "../assets/data/allservices.json";
+import SERVICES from "../assets/data/allservices.js";
 import { NavLink } from "react-router-dom";
 
 const SerItem = () => {
-  const [data, setData] = useState(DATA);
-  console.log(data.services);
+  const [data, setData] = useState(SERVICES);
+  console.log(data);
   return (
     <Fragment>
-      {data.services.map((item) => {
+      {data.map((item) => {
         return (
           <div className="playground" key={Math.random()}>
             <div className="catt-title ">

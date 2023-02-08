@@ -357,13 +357,11 @@ video {
   .container {
     max-width: 768px;
   }
-
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
-
 }
 @media (min-width: 1280px) {
   .container {
@@ -468,8 +466,9 @@ video {
   padding-left: 1em;
 }
 .prose
-  :where(blockquote p:first-of-type):not(:where([class~="not-prose"]
-      *)):before {
+  :where(blockquote p:first-of-type):not(
+    :where([class~="not-prose"] *)
+  ):before {
   content: open-quote;
 }
 .prose
@@ -742,13 +741,15 @@ video {
   padding: 0.5714286em;
 }
 .prose
-  :where(tbody td:first-child, tfoot
-    td:first-child):not(:where([class~="not-prose"] *)) {
+  :where(tbody td:first-child, tfoot td:first-child):not(
+    :where([class~="not-prose"] *)
+  ) {
   padding-left: 0;
 }
 .prose
-  :where(tbody td:last-child, tfoot
-    td:last-child):not(:where([class~="not-prose"] *)) {
+  :where(tbody td:last-child, tfoot td:last-child):not(
+    :where([class~="not-prose"] *)
+  ) {
   padding-right: 0;
 }
 .prose :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
@@ -4852,15 +4853,14 @@ button {
   /* display: grid;
   grid-template-columns: auto 1fr; */
   line-height: 0;
-  margin: 30px 0 ;
-
+  margin: 30px 0;
 }
 
 .catt-title h3 {
   color: #000;
   font-size: 1.75rem;
   margin: 0;
-line-height: 1;
+  line-height: 1;
 }
 
 .dark .catt-title h3 {
@@ -4892,7 +4892,8 @@ line-height: 1;
   z-index: 1;
 }
 .dark .catt-title .text-left:before {
-  background-color: #06b6d4;}
+  background-color: #06b6d4;
+}
 .catt-title .text-left .btn-brd {
   border: 1px solid #6d28d9;
 }
@@ -4985,4 +4986,7 @@ a:before {
   -webkit-box-align: center;
   align-items: center;
   margin-right: 10px;
+}
+.topbarpt {
+  padding: 50px 0;
 }
