@@ -12,7 +12,7 @@ const SerItem = () => {
           <div className="playground" key={Math.random()}>
             <div className="catt-title ">
               <div className="text-left">
-                <a className="rn-btn btn-brd mr--30">
+                <a className="rn-btn btn-brd mr--30" id={`${item.name}`}>
                   <span>{item.name}</span>
                 </a>
               </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CiDark, CiLight } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -75,46 +76,24 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             <div className="flex space-x-2">
-              <NavLink
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                to="/"
+              <Link
+                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
               >
                 Home
-              </NavLink>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
+              </Link>
+              <Link
                 className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#features"
+                activeClass="active"
+                to="Gradient"
+                spy={true}
+                smooth={true}
               >
-                Playground
-              </a>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#modules"
-              >
-                Converter
-              </a>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#projects"
-              >
-                Formatter
-              </a>
-              <a
-                current="bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium"
-                default=""
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                href="/#process"
-              >
-                Generator
-              </a>
+                Gradient
+              </Link>
             </div>
             <div className="hidden lg:ml-4 lg:block">
               <div className="flex items-center space-x-4">

@@ -4990,3 +4990,9 @@ a:before {
 .topbarpt {
   padding: 50px 0;
 }
+.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
