@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { CiDark, CiLight } from "react-icons/ci";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import DarkSwitcher from "./darkmode/DarkSwitcher";
 
 const Header = () => {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleDark = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
   return (
     <nav className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80">
       <div className="container">
@@ -53,12 +40,7 @@ const Header = () => {
           </div>
           <div className="flex space-x-2 lg:hidden">
             <div className="ml-auto flex flex-shrink-0 items-center p-1 text-gray-400 hover:text-white focus:outline-none">
-              <div
-                className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw dark:text-white "
-                onClick={handleDark}
-              >
-                {theme === "dark" ? <CiDark /> : <CiLight />}
-              </div>
+              <DarkSwitcher />
             </div>
             <button
               className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none"
@@ -97,13 +79,8 @@ const Header = () => {
             </div>
             <div className="hidden lg:ml-4 lg:block">
               <div className="flex items-center space-x-4">
-                <div
-                  className="mantine-ThemeIcon-root focus-reset flex-shrink-0 cursor-pointer p-1 mantine-1hy8bmw dark:text-white "
-                  onClick={handleDark}
-                >
-                  {theme === "dark" ? <CiLight /> : <CiDark />}
-                </div>
-                <div>
+                <DarkSwitcher />
+                {/* <div>
                   <div className="flex space-x-3">
                     <a
                       className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio px-5 py-2 text-white"
@@ -128,7 +105,7 @@ const Header = () => {
                       </div>
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

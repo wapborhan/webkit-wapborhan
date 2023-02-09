@@ -60,7 +60,7 @@ input[type="color"]::-webkit-color-swatch {
   transition: 0.5s;
   background-size: 200% auto !important;
   color: #fff;
-  box-shadow: 0 0 20px #eee;
+  /* box-shadow: 0 0 20px #eee; */
   border-radius: 10px;
   display: block;
 }

@@ -4,10 +4,7 @@ import SerItem from "./SerItem";
 
 const Services = () => {
   return (
-    <section
-      className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped"
-      id="features"
-    >
+    <section className="wrapper scroll-mt-16 bg-left bg-no-repeat dark:bg-[#0B1120]  dark:bg-none lg:bg-shape2_filpped">
       <div className="container relative space-y-14  mb-10">
         <div className="w-full text-center">
           <div className="flex h-full w-full items-center justify-center">

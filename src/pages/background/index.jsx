@@ -23,24 +23,25 @@ export default class index extends Component {
       });
     }
     return (
-      <div className="container topbarpt">
-        <div className="grid w-full gap-4 lg:grid-cols-4">
-          {this.state.hoverButton.map((item) => {
-            const code = item.code;
-            return (
-              <div className="col-md-4" key={item.id}>
-                <div className="card mt-3">
-                  <div className="border-general rounded-1  border p-4 transition-all shadow">
-                    <div
-                      className="backgroundsr text-light w-100"
-                      style={{
-                        background: `${item.code}`,
-                      }}
-                    >
-                      {/* {item.text} */}
+      <div className="backsr dark:bg-[#0B1120]  dark:bg-none">
+        <div className="container topbarpt">
+          <div className="grid w-full gap-4 lg:grid-cols-4">
+            {this.state.hoverButton.map((item) => {
+              const code = item.code;
+              return (
+                <div className="col-md-4" key={item.id}>
+                  <div className="card mt-3">
+                    <div className="border-general rounded-1  border p-4 transition-all shadow">
+                      <div
+                        className="backgroundsr text-light w-100"
+                        style={{
+                          background: `${item.code}`,
+                        }}
+                      >
+                        {/* {item.text} */}
+                      </div>
                     </div>
-                  </div>
-                  {/* <div className="copy d-flex justify-content-end">
+                    {/* <div className="copy d-flex justify-content-end">
                     <form>
                       <textarea
                         ref={this.textAreaRef}
@@ -55,10 +56,11 @@ export default class index extends Component {
                       COPY
                     </button>
                   </div> */}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     );

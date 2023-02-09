@@ -126,41 +126,43 @@ function Gradient() {
   };
 
   return (
-    <div className="container mx-auto mt-5">
-      <div className="flex">
-        <div class="block rounded-lg shadow-lg bg-white text-center w-100">
-          <div
-            class="py-3 px-6 border-b border-gray-300 gradientstop rounded"
-            style={ulStyle}
-          ></div>
-          <div class="flex ">
-            <div className="col-4">
-              <Color
-                error={error}
-                color1={color1}
-                icolor1={icolor1}
-                handleChangeColor1={handleChangeColor1}
-                handleChangeColor2={handleChangeColor2}
-                color2={color2}
-                icolor2={icolor2}
-                // setColor2={setColor2}
+    <div className=" dark:bg-[#0B1120]  dark:bg-none">
+      <div className="container mx-auto pt-5 pb-5">
+        <div className="flex">
+          <div class="block rounded-lg shadow-lg bg-white text-center w-100 dark:bg-[#12192d]">
+            <div
+              class="py-3 px-6 border-b border-gray-300 gradientstop rounded"
+              style={ulStyle}
+            ></div>
+            <div class="flex ">
+              <div className="col-4">
+                <Color
+                  error={error}
+                  color1={color1}
+                  icolor1={icolor1}
+                  handleChangeColor1={handleChangeColor1}
+                  handleChangeColor2={handleChangeColor2}
+                  color2={color2}
+                  icolor2={icolor2}
+                  // setColor2={setColor2}
+                />
+              </div>
+              <div className="col-8">
+                <Button
+                  arrow={arrow}
+                  radial={radial}
+                  changeOrientation={changeOrientation}
+                />
+              </div>
+            </div>
+            <div class="py-0 px-0 border-t border-gray-300 text-gray-600 dark:text-white w-100">
+              <Code
+                textAreaRef={textAreaRef}
+                cssCode={cssCode}
+                copyToClipboard={copyToClipboard}
+                copySuccess={copySuccess}
               />
             </div>
-            <div className="col-8">
-              <Button
-                arrow={arrow}
-                radial={radial}
-                changeOrientation={changeOrientation}
-              />
-            </div>
-          </div>
-          <div class="py-0 px-0 border-t border-gray-300 text-gray-600 w-100">
-            <Code
-              textAreaRef={textAreaRef}
-              cssCode={cssCode}
-              copyToClipboard={copyToClipboard}
-              copySuccess={copySuccess}
-            />
           </div>
         </div>
       </div>
