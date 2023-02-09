@@ -35,10 +35,9 @@ const Services = () => {
             </div>
           </div>
           <h1 className="section-title">
-            এক নজরে আমাদের <span className="primary-highlighter">রিডাক্স</span>{" "}
-            কোর্স
+            Our Free Online <span className="primary-highlighter">Tools</span>{" "}
+            at a glance
           </h1>
-          <p className="subtitle">এই কোর্সে যা যা থাকছে</p>
         </div>
       </div>
       <div className="container">

@@ -12,17 +12,17 @@ function Gradient() {
   const [color1, setColor1] = useState("#ff2600");
   const [color2, setColor2] = useState("#0000FF");
   const [direction, setDirection] = useState("linear-gradient");
-  const [generated1, setGenerated1] = useState("");
-  const [generated2, setGenerated2] = useState("");
-  const [generated3, setGenerated3] = useState("");
+  // const [generated1, setGenerated1] = useState("");
+  // const [generated2, setGenerated2] = useState("");
+  // const [generated3, setGenerated3] = useState("");
   const [orientation, setOrientation] = useState("to right bottom");
   const [error, setError] = useState("");
   const [invertedcolor1, setinvertedColor1] = useState("");
   const [invertedcolor2, setinvertedColor2] = useState("");
   const [copySuccess, setCopySuccess] = useState("");
   const textAreaRef = useRef(null);
-  const hex = useRef(color1);
-  const hex2 = useRef(color2);
+  // const hex = useRef(color1);
+  // const hex2 = useRef(color2);
 
   const ulStyle = {
     backgroundImage:
@@ -91,14 +91,14 @@ function Gradient() {
     }
   };
 
-  function checkContrast(color) {
-    const contrast = chroma(color).luminance();
-    if (contrast > 0.6) {
-      return "#000";
-    } else {
-      return "#fff";
-    }
-  }
+  // function checkContrast(color) {
+  //   const contrast = chroma(color).luminance();
+  //   if (contrast > 0.6) {
+  //     return "#000";
+  //   } else {
+  //     return "#fff";
+  //   }
+  // }
 
   // function doJob(e) {
   //   e.preventDefault();
