@@ -87,7 +87,7 @@ function Gradient() {
 
       setError("");
     } else {
-      setError("Color are no valid.");
+      setError("Color are no valid!");
     }
   };
 
@@ -129,13 +129,13 @@ function Gradient() {
     <div className=" dark:bg-[#0B1120]  dark:bg-none">
       <div className="container mx-auto pt-5 pb-5">
         <div className="flex">
-          <div class="block rounded-lg shadow-lg bg-white text-center w-100 dark:bg-[#12192d]">
+          <div className="block rounded-lg shadow-lg bg-white text-center w-full dark:bg-[#12192d]">
             <div
-              class="py-3 px-6 border-b border-gray-300 gradientstop rounded"
+              className="py-3 px-6 border-b border-gray-300 gradientstop rounded"
               style={ulStyle}
             ></div>
-            <div class="flex ">
-              <div className="col-4">
+            <div className="flex mx-5 my-3">
+              <div className="flex-initial w-3/12">
                 <Color
                   error={error}
                   color1={color1}
@@ -147,7 +147,7 @@ function Gradient() {
                   // setColor2={setColor2}
                 />
               </div>
-              <div className="col-8">
+              <div className="flex-initial w-9/12">
                 <Button
                   arrow={arrow}
                   radial={radial}
@@ -155,7 +155,7 @@ function Gradient() {
                 />
               </div>
             </div>
-            <div class="py-0 px-0 border-t border-gray-300 text-gray-600 dark:text-white w-100">
+            <div className="py-0 px-0 border-t border-gray-300 text-gray-600 dark:text-white w-100">
               <Code
                 textAreaRef={textAreaRef}
                 cssCode={cssCode}

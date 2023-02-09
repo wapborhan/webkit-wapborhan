@@ -3,12 +3,9 @@ import React from "react";
 const Color = (props) => {
   return (
     <div className="color">
-      <h2 className="text-dark">Choose Color</h2>
-      <div className="text-dark text-center py-2 rounded mb-3  text-white w-40 mx-auto">
-        <h5 className="bg-amber-700 text-danger">{props.error}</h5>
-      </div>
+      <h2 className="text-dark dark:text-white mb-2">Choose Color</h2>
 
-      <div className="s">
+      <div className="flex">
         <div className="d-flex justify-content-between w-100 mb-2">
           {/* <div className="h5 w-25">Color 1</div> */}
           <input
@@ -24,7 +21,7 @@ const Color = (props) => {
           />
           <input
             type="text"
-            className="w-50"
+            className="w-50 bg-white dark:bg-slate-800 dark:text-white "
             // style={props.icolor1}
             value={props.color1}
             // onChange={(e) => props.setColor1(e.target.value)}
@@ -46,13 +43,22 @@ const Color = (props) => {
           />
           <input
             type="text"
-            className="w-50"
+            className="w-50 bg-white dark:bg-slate-800 dark:text-white "
             // style={props.icolor2}
             value={props.color2}
             // onChange={(e) => props.setColor2(e.target.value)}
             onChange={props.handleChangeColor2}
           />
         </div>
+      </div>
+      <div className="text-dark text-center rounded   text-white w-40 mx-auto">
+        {props.error ? (
+          <h5 className=" bg-red-600 px-3 -y-1 rounded text-danger">
+            {props.error}
+          </h5>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

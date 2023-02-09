@@ -5,7 +5,9 @@ const Button = (props) => {
   return (
     <Fragment>
       <div className="orien">
-        <h2 className="text-dark text-center">Choose orientation</h2>
+        <h2 className="text-dark text-center dark:text-white mb-2">
+          Choose orientation
+        </h2>
         <div className="flex items-center justify-center p-2 gap-2 flex-wrap md:gap-5">
           <button
             className="btn  bg-teal-500 rounded ms-1"
@@ -100,7 +102,7 @@ const Button = (props) => {
           </button>
 
           <button
-            className=" btn bg-teal-500 rounded ms-1 mt-2"
+            className=" btn bg-teal-500 rounded ms-1 "
             onClick={() => props.changeOrientation("circle")}
           >
             <img
