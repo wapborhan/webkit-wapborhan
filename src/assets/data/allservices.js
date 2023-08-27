@@ -49,6 +49,18 @@ const SERVICES = [
       },
     ],
   },
+  {
+    name: "Genaretor",
+    link: "/genaretor",
+    sub_cat: [
+      {
+        color: "#ff5722",
+        icon: ``,
+        title: "Qrcode",
+        link: "/qrcode",
+      },
+    ],
+  },
   // {
   //   name: "Playground",
   //   link: "/playground",
@@ -113,27 +125,6 @@ const SERVICES = [
   //       color: "",
   //       icon: "",
   //       title: "Javascript Minify",
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: "Generator",
-  //   link: "/generator",
-  //   sub_cat: [
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "Password Generatter",
-  //     },
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "MD5 Hash Generator",
-  //     },
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "SHA1 Hash Generator",
   //     },
   //   ],
   // },

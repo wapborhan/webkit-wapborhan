@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const SerItem = () => {
   const [data, setData] = useState(SERVICES);
-  console.log(data);
+  // console.log(data);
   return (
     <Fragment>
       {data.map((item) => {

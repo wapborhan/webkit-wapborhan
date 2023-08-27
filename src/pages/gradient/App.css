@@ -6,25 +6,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .rotate-135 {
   transform: rotate(135deg);
 }
+
 .rotate-225 {
   transform: rotate(225deg);
 }
+
 .srcircle:focus {
   border: 1.5px solid #fff;
   border-radius: 8px;
   outline: none;
   transition: all 0.3s;
 }
+
 .font-cursive {
   font-family: cursive;
 }
+
 .box {
   background: rgba(255, 254, 254, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
@@ -34,11 +40,13 @@ code {
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
 }
+
 .box:focus {
   outline: 0;
 }
-input[type="color"],
-input[type="text"] {
+
+.color input[type="color"],
+.color input[type="text"] {
   -webkit-appearance: none !important;
   border: none !important;
   width: 50px !important;
@@ -50,18 +58,23 @@ input[type="text"] {
   vertical-align: middle;
   text-align: center;
 }
-input[type="text"] {
+
+.color input[type="text"] {
   width: 80px !important;
 }
-input[type="color"]::-webkit-color-swatch-wrapper {
+
+.color input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-input[type="color"]::-webkit-color-swatch {
+
+.color input[type="color"]::-webkit-color-swatch {
   border: none;
 }
+
 .gradientstop {
   padding: 100px 0;
 }
+
 .btnsr {
   padding: 15px 45px;
   text-align: center;
@@ -73,24 +86,30 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 10px;
   display: block;
 }
+
 .backgroundsr {
   height: 200px;
 }
+
 .btnsr:hover {
   background-position: right center !important;
   color: #fff;
   text-decoration: none;
 }
+
 .sidebars {
   background: linear-gradient(to left, #2b5876 0%, #4e4376 100%);
 }
+
 .topbar {
   background: linear-gradient(to right, #2b5876 0%, #4e4376 100%);
   color: #fff;
 }
+
 .sidebars .logo-details {
   height: 60px !important;
 }
+
 .account ul li {
   margin-right: 15px;
   font-size: 20px;

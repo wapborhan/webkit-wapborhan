@@ -2,6 +2,7 @@ import HomePage from "../home/Homepage";
 import Gradient from "../pages/gradient/Gradient";
 import GradientButton from "../pages/button";
 import GradientBackground from "../pages/background";
+import QrCode from "../pages/qrcode/QrCode";
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     url: "/gradient-background",
     component: <GradientBackground />,
+  },
+  {
+    url: "/qrcode",
+    component: <QrCode />,
   },
 ];
 export { routes };

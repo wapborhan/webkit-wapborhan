@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import DarkSwitcher from "./darkmode/DarkSwitcher";
+import SERVICES from "../assets/data/allservices";
 
 const Header = () => {
+  const [data, setData] = useState(SERVICES);
+
   return (
     <nav className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80">
       <div className="container">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center lg:px-0">
             <div className="flex flex-shrink-0 items-center">
-              <a className="flex items-center" href="/">
+              <NavLink className="flex items-center" to="/">
                 <span
-                  className="dark:text-white"
+                  className="dark:text-white text-black dark:bg-transparent bg-white"
                   //  style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
                 >
                   <span
@@ -35,7 +38,7 @@ const Header = () => {
                     srcset="/_next/static/media/lws-logo-light.ae7b3c3a.svg 1x, /_next/static/media/lws-logo-light.ae7b3c3a.svg 2x"
                   /> */}
                 </span>
-              </a>
+              </NavLink>
             </div>
           </div>
           <div className="flex space-x-2 lg:hidden">
@@ -67,45 +70,25 @@ const Header = () => {
               >
                 Home
               </Link>
-              <Link
-                className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
-                activeClass="active"
-                to="Gradient"
-                spy={true}
-                smooth={true}
-              >
-                Gradient
-              </Link>
+              {data.map((navitem) => {
+                console.log(navitem);
+                return (
+                  <Link
+                    className="text-slate-700 hover:bg-gray-800 hover:text-white dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 rounded-md px-3 py-2 text-sm font-medium"
+                    activeClass="active"
+                    to={navitem.name}
+                    spy={true}
+                    smooth={true}
+                    key={Math.random()}
+                  >
+                    {navitem.name}
+                  </Link>
+                );
+              })}
             </div>
             <div className="hidden lg:ml-4 lg:block">
               <div className="flex items-center space-x-4">
                 <DarkSwitcher />
-                {/* <div>
-                  <div className="flex space-x-3">
-                    <a
-                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio px-5 py-2 text-white"
-                      type="button"
-                      href="/login"
-                    >
-                      <div className="mantine-3xbgk5 mantine-Button-inner">
-                        <span className="mantine-qo1k2 mantine-Button-label">
-                          Login
-                        </span>
-                      </div>
-                    </a>{" "}
-                    <a
-                      className="mantine-Button-filled !bg-slate-900 !text-sm dark:!bg-sky-600 rounded-full mantine-Button-root mantine-13eqaio px-5 py-2 text-white"
-                      type="button"
-                      href="/login"
-                    >
-                      <div className="mantine-3xbgk5 mantine-Button-inner">
-                        <span className="mantine-qo1k2 mantine-Button-label">
-                          Registration
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
