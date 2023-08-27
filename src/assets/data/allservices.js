@@ -107,27 +107,28 @@ const SERVICES = [
   //     },
   //   ],
   // },
-  // {
-  //   name: "Formatter",
-  //   link: "/formatter",
-  //   sub_cat: [
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "HTML Minify",
-  //     },
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "CSS Minify",
-  //     },
-  //     {
-  //       color: "",
-  //       icon: "",
-  //       title: "Javascript Minify",
-  //     },
-  //   ],
-  // },
+  {
+    name: "Formatter",
+    link: "/formatter",
+    sub_cat: [
+      // {
+      //   color: "",
+      //   icon: "",
+      //   title: "HTML Minify",
+      // },
+      {
+        color: "#1b73ba",
+        icon: `fa-brands fa-css3`,
+        title: "CSS Minify",
+        link: "/cssminify",
+      },
+      // {
+      //   color: "",
+      //   icon: "",
+      //   title: "Javascript Minify",
+      // },
+    ],
+  },
 ];
 
 export default SERVICES;

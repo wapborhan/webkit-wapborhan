@@ -26,10 +26,10 @@ const SerItem = () => {
                     key={Math.random()}
                   >
                     <div
-                      className=" mx-auto flex h-12 w-12 items-center justify-center rounded-full"
+                      className="mx-auto flex h-12 w-12 items-center justify-center rounded-full text-white"
                       style={{ backgroundColor: `${subitem.color}` }}
                     >
-                      I
+                      {subitem.icon ? <i class={`${subitem.icon}`}></i> : "I"}
                     </div>
                     <h2 className="text-normal text-0 mx-0 mb-8 mt-8 box-border border-0 border-solid border-gray-200 text-center font-medium">
                       {subitem.title}
