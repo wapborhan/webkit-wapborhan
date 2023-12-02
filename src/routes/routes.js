@@ -4,6 +4,7 @@ import GradientButton from "../pages/button";
 import GradientBackground from "../pages/background";
 import QrCode from "../pages/qrcode/QrCode";
 import CssMinified from "../pages/cssminify/CssMinified";
+import ReactGradients from "../pages/background/ReactGradients";
 
 const routes = [
   {
@@ -20,7 +21,7 @@ const routes = [
   },
   {
     url: "/gradient-background",
-    component: <GradientBackground />,
+    component: <ReactGradients />,
   },
   {
     url: "/qrcode",
