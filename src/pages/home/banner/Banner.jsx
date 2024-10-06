@@ -110,7 +110,7 @@ const Banner = () => {
             className="flex items-center justify-center gap-3 425px:gap-6 mt-8"
           >
             <Link
-              href="/getting-started"
+              href="/getting-started/overview"
               className="py-3 px-6 640px:px-8 bg-primary text-white rounded-md hover:bg-transparent border-primary border-2 hover:text-primary transition-all duration-300"
             >
               Get Started

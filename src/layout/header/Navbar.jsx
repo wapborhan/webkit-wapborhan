@@ -39,24 +39,35 @@ const Navbar = () => {
   //   }
   // }, [toggle]);
 
-  document.addEventListener("click", (event) => {
-    if (
-      !event.target.closest(".zenuiSearchComponent") &&
-      !event.target.closest(".zenuiSearchInput")
-    ) {
-      setIsSearchOpen(false);
-    }
-  });
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        !event.target.closest(".zenuiSearchComponent") &&
+        !event.target.closest(".zenuiSearchInput")
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
 
-  document.addEventListener("keydown", function (event) {
-    event.stopPropagation();
-    if ((event.ctrlKey || event.metaKey) && event.key === "f") {
-      event.preventDefault();
-      setIsSearchOpen(true);
-    } else if (event.key === "Escape") {
-      setIsSearchOpen(false);
-    }
-  });
+    const handleKeydown = (event) => {
+      event.stopPropagation();
+      if ((event.ctrlKey || event.metaKey) && event.key === "f") {
+        event.preventDefault();
+        setIsSearchOpen(true);
+      } else if (event.key === "Escape") {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleKeydown);
+
+    // Cleanup event listeners when component unmounts
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -92,12 +103,9 @@ const Navbar = () => {
               alt="logo"
               className="w-[70px] cursor-pointer z-10"
             /> */}
-            <Image
-              src="/darklogo.png"
-              alt="WebKit"
-              width={60}
-              height={30}
-            ></Image>
+            <Link href="/">
+              <Image src="/darklogo.png" alt="WebKit" width={60} height={30} />
+            </Link>
           </div>
           <ul
             className={`text-gray-600 navUl flex items-center gap-8 font-[500] capitalize text-[1.2rem]`}
