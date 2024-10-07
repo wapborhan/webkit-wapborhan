@@ -116,7 +116,7 @@ const Banner = () => {
               Get Started
             </Link>
             <Link
-              href="/"
+              href="/components/all"
               className="py-[11px] z-10 px-6 640px:px-8 border-2 border-primary hover:bg-primary hover:text-white text-primary rounded-md transition-all duration-300"
             >
               Components
