@@ -39,35 +39,35 @@ const Navbar = () => {
   //   }
   // }, [toggle]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        !event.target.closest(".zenuiSearchComponent") &&
-        !event.target.closest(".zenuiSearchInput")
-      ) {
-        setIsSearchOpen(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (
+  //       !event.target.closest(".zenuiSearchComponent") &&
+  //       !event.target.closest(".zenuiSearchInput")
+  //     ) {
+  //       setIsSearchOpen(false);
+  //     }
+  //   };
 
-    const handleKeydown = (event) => {
-      event.stopPropagation();
-      if ((event.ctrlKey || event.metaKey) && event.key === "f") {
-        event.preventDefault();
-        setIsSearchOpen(true);
-      } else if (event.key === "Escape") {
-        setIsSearchOpen(false);
-      }
-    };
+  // const handleKeydown = (event) => {
+  //   event.stopPropagation();
+  //   if ((event.ctrlKey || event.metaKey) && event.key === "f") {
+  //     event.preventDefault();
+  //     setIsSearchOpen(true);
+  //   } else if (event.key === "Escape") {
+  //     setIsSearchOpen(false);
+  //   }
+  // };
 
-    document.addEventListener("click", handleClickOutside);
-    document.addEventListener("keydown", handleKeydown);
+  // document.addEventListener("click", handleClickOutside);
+  // document.addEventListener("keydown", handleKeydown);
 
-    // Cleanup event listeners when component unmounts
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("keydown", handleKeydown);
-    };
-  }, []);
+  // Cleanup event listeners when component unmounts
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //     document.removeEventListener("keydown", handleKeydown);
+  //   };
+  // }, []);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -86,10 +86,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`border-b border-gray-100 1024px:flex items-center justify-between w-full px-40 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3`}
-      >
-        <div className="flex items-center gap-8 relative">
+      <nav className="border-b border-gray-100 1024px:flex items-center justify-between w-full px-40 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3">
+        <div className="flex items-center gap-14 relative content-between">
           {pathname === "/" && (
             <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-140px] opacity-30 left-0 blur-[70px] rotate-[-50deg]"></div>
           )}
@@ -111,68 +109,58 @@ const Navbar = () => {
             className={`text-gray-600 navUl flex items-center gap-8 font-[500] capitalize text-[1.2rem]`}
           >
             <li className="">
-              <p
-              // className={
-              //   pathname === "/getting-started/templates" && "!text-[#0FABCA]"
-              // }
-              >
-                <a href="/getting-started/templates">Templates</a>
+              <p className={pathname === "/background" && "!text-primary"}>
+                <Link href="/background">Backgrounds</Link>
               </p>
               <span>
-                <a href="/getting-started/templates">Templates</a>
+                <Link href="/background">Backgrounds</Link>
               </span>
             </li>
             <li className="relative pr-[45px]">
-              <div className="bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
+              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
                 NEW
-                <div className="w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
+                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
               </div>
-              <p
-              // className={
-              //   pathname === "/blocks/all-blocks" && "!text-[#0FABCA]"
-              // }
-              >
-                <a href="/blocks/all-blocks">Blocks</a>
+              <p className={pathname === "/minify" && "!text-primary"}>
+                <Link href="/minify">Code Minify</Link>
               </p>
               <span>
-                <a href="/blocks/all-blocks">Blocks</a>
+                <Link href="/minify">Code Minify</Link>
               </span>
             </li>
 
-            <li className="relative pr-[45px]">
-              <div className="bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
+            {/* <li className="relative pr-[45px]">
+              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
                 NEW
-                <div className="w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
+                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
               </div>
               <p
-              //   className={pathname === "/icons" && "!text-[#0FABCA]"}
+              //   className={pathname === "/icons" && "!text-primary"}
               >
                 <a href="/icons">Icons</a>
               </p>
               <span>
                 <a href="/icons">Icons</a>
               </span>
-            </li>
+            </li> */}
 
             <li className="relative pr-[45px]">
-              <div className="bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
+              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
                 NEW
-                <div className="w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
+                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
               </div>
-              <p
-              // className={pathname === "/opacity-palette" && "!text-[#0FABCA]"}
-              >
-                <a href="/opacity-palette">Opacity Palette</a>
+              <p className={pathname === "/qr-genaretor" && "!text-primary"}>
+                <Link href="/qr-genaretor">QR Genaretor</Link>
               </p>
               <span>
-                <a href="/opacity-palette">Opacity Palette</a>
+                <Link href="/qr-genaretor">QR Genaretor</Link>
               </span>
             </li>
           </ul>
         </div>
 
-        <div className="flex items-end gap-2 w-[30%s]">
-          <div
+        <div className="flex items-end gap-2 w-[30%]">
+          {/* <div
             className="zenuiSearchInput relative w-full"
             onClick={handleSearchClick}
           >
@@ -192,20 +180,14 @@ const Navbar = () => {
             >
               Ctrl + F
             </span>
-          </div>
-          <div className="flex items-end gap-2">
-            <a href="https://discord.gg/qbwytm4WUG" target="_blank">
-              <RxDiscordLogo
-                className={`text-[2.7rem] text-gray-400 rounded-md p-[6px] border border-gray-200 cursor-pointer`}
-              />
-            </a>
-
-            <a href="https://github.com/Asfak00/zenui-library" target="_blank">
+          </div> */}
+          {/* <div className="flex items-end gap-2">
+            <Link href="https://github.com/wapborhan" target="_blank">
               <FiGithub
                 className={`text-[2.7rem] text-gray-400 rounded-md p-[6px] border border-gray-200 cursor-pointer`}
               />
-            </a>
-          </div>
+            </Link>
+          </div> */}
           {/* {toggle ? (
             <BsSunFill
               className="text-[2.7rem] text-primary rounded-md p-[6px] border border-gray-200 cursor-pointer"
@@ -220,13 +202,13 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div
+      {/* <div
         className={`${
           isSearchOpen ? "visible z-[100]" : "invisible z-[-1]"
         } transition-all duration-500`}
       >
         <Search isSearchOpen={isSearchOpen} />
-      </div>
+      </div> */}
     </>
   );
 };

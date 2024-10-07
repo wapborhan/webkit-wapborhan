@@ -1,11 +1,16 @@
 "use client";
 import ContentHeader from "@/components/shared/ContentHeader";
 import ShowCode from "@/components/shared/ShowCode";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Animated = () => {
   const [animateLabelPreiview, setAnimateLabelPreview] = useState(true);
   const [animateLabelCode, setAnimateLabelCode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Ensures the component is mounted
+  }, []);
 
   const handleAnimateLabelPreview = () => {
     setAnimateLabelPreview(true);
@@ -16,6 +21,11 @@ const Animated = () => {
     setAnimateLabelCode(true);
     setAnimateLabelPreview(false);
   };
+
+  if (!isMounted) {
+    // Prevents mismatching of HTML during server-side rendering
+    return null;
+  }
   return (
     <>
       <div className="mt-8">
@@ -74,15 +84,13 @@ const Animated = () => {
 
         {animateLabelCode && (
           <ShowCode
-            code='
-<label className="relative w-[80%]">
-<input type="text" name="name" id="name" className="peer border-[#e5eaf2] border rounded-md outline-none px-4 py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
-/>
-<span className=" absolute top-3.5 left-5 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
-Your name
-</span>
-</label>
-        '
+            code={`<label className="relative w-[80%]">
+  <input type="text" name="name" id="name" className="peer border-[#e5eaf2] border rounded-md outline-none px-4 py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
+  />
+  <span className=" absolute top-3.5 left-5 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+    Your name
+  </span>
+</label>`}
           />
         )}
       </div>

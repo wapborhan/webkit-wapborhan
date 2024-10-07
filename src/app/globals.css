@@ -53,7 +53,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #3b9df8;
+  background-color: rgb(208 43 142 / 1);
   border-radius: 30px;
 }
 

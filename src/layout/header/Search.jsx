@@ -9,6 +9,7 @@ import { LuLayoutTemplate } from "react-icons/lu";
 import { RxSection } from "react-icons/rx";
 import { CgTemplate } from "react-icons/cg";
 import Link from "next/link";
+import Image from "next/image";
 
 const Search = ({ isSearchOpen }) => {
   const [filteredComponentData, setFilteredComponentData] =
@@ -110,7 +111,13 @@ const Search = ({ isSearchOpen }) => {
 
           {!filteredBlocksData?.length && !filteredComponentData?.length && (
             <div className="mt-5 flex items-center h-[90%] flex-col justify-center">
-              <img src="/zenui_search_not_found.png" className="w-[60px]" />
+              <Image
+                alt=""
+                src="/zenui_search_not_found.png"
+                className="w-[60px]"
+                width={60}
+                height={60}
+              />
               <p className="text-[0.9rem] text-text mt-2">No Search found!</p>
             </div>
           )}

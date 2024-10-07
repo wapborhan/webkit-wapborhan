@@ -35,7 +35,7 @@ const Banner = () => {
     <main className="w-full min-h-screens">
       <div className="flex 1024px:flex-row flex-col items-center justify-center text-center px-8 640px:px-12 640px:pl-12 mt-[1rem] 425px:mt-[1rem] ">
         <motion.div
-          className="1024px:w-[50%] w-full relative"
+          className="1024px:w-[70%] w-full relative"
           initial="hidden"
           animate="show"
           viewport={{ once: true }}
@@ -50,8 +50,7 @@ const Banner = () => {
         >
           <div className="w-[100px] h-[400px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[-150px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
           <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-200px] animate-pulse opacity-30 left-8 blur-[70px] rotate-[-50deg]"></div>
-          <Link href="">
-            {" "}
+          <Link href="https://github.com/wapborhan/webkit-wapborhan">
             <div
               className="gradient-border"
               data-aos="fade-zoom-in"
@@ -73,7 +72,7 @@ const Banner = () => {
             className="text-[2.4rem] font-[600] 425px:text-[3rem] 640px:text-[2.8rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[1.25] text-text"
           >
             <span className="heroText text-danger font-[500]">WeBKit</span> Free
-            UI Components & Templates Library
+            Online Tools <br /> For Developers
           </motion.h1>
 
           <motion.div
@@ -86,10 +85,10 @@ const Banner = () => {
                 <FaReact className="text-[1.4rem] text-gray-500" />
                 <p className="text-[1.1rem] text-gray-500">React</p>
               </div>
-              <div className="flex items-center gap-[5px]">
+              {/* <div className="flex items-center gap-[5px]">
                 <BiLogoTailwindCss className="text-[1.8rem] text-gray-500" />
                 <p className="text-[1.1rem] text-gray-500">Tailwind CSS</p>
-              </div>
+              </div> */}
               <div className="flex items-center gap-[5px]">
                 <TbBrandNextjs className="text-[1.5rem] text-gray-500" />
                 <p className="text-[1.1rem] text-gray-500">Next JS</p>
@@ -101,8 +100,12 @@ const Banner = () => {
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className=" text-gray-500 w-full 425px:w-[80%] 640px:w-[91%] font-[400] text-[1.1rem]"
           >
-            WeBKit is an Tailwind CSS components library for any needs. Comes
-            with UI examples & blocks, templates, Icons, Color Palette and more.
+            WeBKit providing developers with free online tools. These tools
+            include several formatters, validators, code minifiers, string
+            escapers, encoders and decoders, message digesters, web resources
+            and more. and also have some Tailwind CSS components for any needs.
+            Comes with UI examples & blocks, and more.
+            {/* templates, Icons, Color Palette */}
           </motion.p>
 
           <motion.div

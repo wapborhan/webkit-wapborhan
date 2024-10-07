@@ -1,10 +1,15 @@
 import ContentHeader from "@/components/shared/ContentHeader";
 import ShowCode from "@/components/shared/ShowCode";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BottomBorder = () => {
   const [bottomBorderPreview, setBottomBorderPreview] = useState(true);
   const [bottomBorderCode, setBottomBorderCode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Ensures the component is mounted
+  }, []);
 
   const handleBottomBorderPreview = () => {
     setBottomBorderPreview(true);
@@ -15,9 +20,12 @@ const BottomBorder = () => {
     setBottomBorderCode(true);
     setBottomBorderPreview(false);
   };
+  if (!isMounted) {
+    // Prevents mismatching of HTML during server-side rendering
+    return null;
+  }
   return (
     <>
-      {" "}
       <div className="mt-8">
         <ContentHeader
           text={"bottom bordered input"}
@@ -68,10 +76,15 @@ const BottomBorder = () => {
 
         {bottomBorderCode && (
           <ShowCode
-            code='
-                <input type="text" name="name" id="name" placeholder="Your name" className="border-[#e5eaf2] border-b outline-none px-4 w-[80%] py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-                />
-       '
+            code={`
+<input
+  type="text" 
+  name="name" 
+  id="name" 
+  placeholder="Your name" 
+  className="border-[#e5eaf2] border-b outline-none px-4 w-[80%] py-3 focus:border-[#3B9DF8] transition-colors duration-300"
+/>
+              `}
           />
         )}
       </div>

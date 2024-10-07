@@ -1,11 +1,16 @@
 "use client";
 import ContentHeader from "@/components/shared/ContentHeader";
 import ShowCode from "@/components/shared/ShowCode";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Required = () => {
   const [primaryInputPreview, setPrimaryInputPreview] = useState(true);
   const [primaryInputCode, setPrimaryInputCode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Ensures the component is mounted
+  }, []);
 
   const handlePrimaryInputPreview = () => {
     setPrimaryInputPreview(true);
@@ -16,6 +21,11 @@ const Required = () => {
     setPrimaryInputCode(true);
     setPrimaryInputPreview(false);
   };
+
+  if (!isMounted) {
+    // Prevents mismatching of HTML during server-side rendering
+    return null;
+  }
   return (
     <>
       <ContentHeader text={"required input"} id={"primary_input"} />
@@ -73,27 +83,26 @@ const Required = () => {
 
         {primaryInputCode && (
           <ShowCode
-            code='
-                  const Textarea = () => {
-                    
-                  return (
-                  <div className="w-[80%]">
-                  <label htmlFor="name" className="text-[15px] font-[400]">
-                    Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Your name"
-                    className="border-[#e5eaf2] border rounded-md outline-none px-4 w-full mt-1 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-                  />
-                  </div>
-                  );
-                  };
+            code={`
+const Textarea = () => {
+  
+return (
+    <div className="w-[80%]">
+      <label htmlFor="name" className="text-[15px] font-[400]">
+        Name <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Your name"
+        className="border-[#e5eaf2] border rounded-md outline-none px-4 w-full mt-1 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
+      />
+    </div>
+  );
+};
 
-                  export default Textarea;
-          '
+export default Textarea;`}
           />
         )}
       </div>

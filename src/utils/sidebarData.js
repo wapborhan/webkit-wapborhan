@@ -168,12 +168,12 @@ export const componentsData = [
         link: "stepper",
       },
       {
-        id: 6,
+        id: 7,
         title: "Modal",
         link: "modal",
       },
       {
-        id: 7,
+        id: 8,
         title: "Tabs",
         link: "tabs",
       },

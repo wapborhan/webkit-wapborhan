@@ -1,15 +1,16 @@
 import Input from "./input";
 
 const ComponentDetails = ({ pathName }) => {
-  return (
-    <div>
-      {pathName === "input-text" && (
-        <>
-          <Input />
-        </>
-      )}
-    </div>
-  );
+  const renderComponent = () => {
+    switch (pathName) {
+      case "input-text":
+        return <Input />;
+      default:
+        return <p>Component not found</p>;
+    }
+  };
+
+  return <div>{renderComponent()}</div>;
 };
 
 export default ComponentDetails;

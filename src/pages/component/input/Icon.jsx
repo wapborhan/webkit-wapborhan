@@ -1,12 +1,17 @@
 import ContentHeader from "@/components/shared/ContentHeader";
 import ShowCode from "@/components/shared/ShowCode";
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiAccountCircleLine, RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineMail } from "react-icons/md";
 
 const Icon = () => {
   const [iconInputPreview, setIconInputPreview] = useState(true);
   const [iconInputCode, setIconInputCode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Ensures the component is mounted
+  }, []);
 
   const handleIconInputPreview = () => {
     setIconInputPreview(true);
@@ -17,6 +22,11 @@ const Icon = () => {
     setIconInputCode(true);
     setIconInputPreview(false);
   };
+
+  if (!isMounted) {
+    // Prevents mismatching of HTML during server-side rendering
+    return null;
+  }
   return (
     <>
       <div className="mt-8">
@@ -91,7 +101,7 @@ const Icon = () => {
 
         {iconInputCode && (
           <ShowCode
-            code='
+            code={`
 import { RiAccountCircleLine, RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineMail } from "react-icons/md";
 
@@ -137,8 +147,8 @@ return (
   );
 };
 
-export default Inputs;
-                '
+export default Inputs;              
+              `}
           />
         )}
       </div>
