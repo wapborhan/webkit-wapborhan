@@ -41,7 +41,7 @@ const ShowCode = ({ code }) => {
         className="syntax-highlighter text-[14px] max-h-[300px] 400px:max-w-[380px] 425px:max-w-[610px] max-w-[320px]"
         style={dracula}
         showLineNumbers
-        // wrapLines={false}
+        wrapLines={false}
       >
         {code}
       </SyntaxHighlighter>

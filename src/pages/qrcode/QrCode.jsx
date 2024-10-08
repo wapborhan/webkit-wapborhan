@@ -50,7 +50,14 @@ const QrCode = () => {
                 placeholder="https://google.com"
                 className="basis-2/2 w-full border-2 border-grey-500 p-2 rounded-md"
               />
-            </div>
+            </div>{" "}
+            <button
+              type="submit"
+              disabled={!url}
+              className="block btn bg-green-700 px-8 py-5 w-full rounded-md text-1xl text-white disabled:bg-slate-200"
+            >
+              Download QR code
+            </button>
           </form>
         </div>
         <div className="qr-code flex flex-col gap-5 justify-center items-center mt-8 pb-8">
@@ -60,13 +67,6 @@ const QrCode = () => {
           >
             {qrcode}
           </div>
-          <button
-            type="submit"
-            disabled={!url}
-            className="block btn bg-green-700 px-8 py-5 w-3/12 rounded-md text-1xl text-white"
-          >
-            Download QR code
-          </button>
         </div>
       </div>
     </div>

@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 
 /* html,
@@ -125,13 +123,13 @@ html {
   cursor: pointer;
 }
 
-.navUl li p {
+/* .navUl li p {
   transform: translateY(0px);
   opacity: 1;
   transition: all 0.4s ease-in-out;
-}
+} */
 
-.navUl li span {
+/* .navUl li span {
   position: absolute;
   top: 0;
   left: 0;
@@ -140,18 +138,18 @@ html {
   transition: all 0.4s ease-in-out;
   opacity: 0;
   transform: translateY(20px);
-}
+} */
 
-.navUl li:hover p {
+/* .navUl li:hover p {
   opacity: 0;
   transform: translateY(-20px);
-}
+} */
 
-.navUl li:hover span {
+/* .navUl li:hover span {
   opacity: 1;
   transform: translateY(0px);
   color: #0FABCA;
-}
+} */
 
 /* button hover effect */
 .buttonSecondary::after {
@@ -220,14 +218,14 @@ aside ul a {
   text-transform: capitalize;
 }
 
-aside ul a:hover {
+/* aside ul a:hover {
   background-color: #e5eaf2;
   font-weight: 500;
   border-left: 1px solid #9caebc;
   border-radius: 0.25rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
+} */
 
 /* sidebar component section header  */
 .sectionHeader {

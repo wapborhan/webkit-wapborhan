@@ -1,15 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
-// icons
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { navLink } from "@/utils/sidebarData";
 import { IoIosSearch } from "react-icons/io";
 import { FiGithub } from "react-icons/fi";
 import { RxDiscordLogo } from "react-icons/rx";
-import Link from "next/link";
-import Search from "./Search";
-import { usePathname } from "next/navigation";
 import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
-import Image from "next/image";
+import Search from "./Search";
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -88,9 +87,9 @@ const Navbar = () => {
     <>
       <nav className="border-b border-gray-100 1024px:flex items-center justify-between w-full px-40 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3">
         <div className="flex items-center gap-14 relative content-between">
-          {pathname === "/" && (
+          {pathname === "/" ? (
             <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-140px] opacity-30 left-0 blur-[70px] rotate-[-50deg]"></div>
-          )}
+          ) : undefined}
 
           <div className="relative mr-6">
             <span className="px-2.5 absolute right-[-40px] text-[#a4a4a8] top-0 py-0.5 bg-[#f0f0f1] rounded-full text-[12px]">
@@ -108,54 +107,24 @@ const Navbar = () => {
           <ul
             className={`text-gray-600 navUl flex items-center gap-8 font-[500] capitalize text-[1.2rem]`}
           >
-            <li className="">
-              <p className={pathname === "/background" && "!text-primary"}>
-                <Link href="/background">Backgrounds</Link>
-              </p>
-              <span>
-                <Link href="/background">Backgrounds</Link>
-              </span>
-            </li>
-            <li className="relative pr-[45px]">
-              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
-                NEW
-                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
-              </div>
-              <p className={pathname === "/minify" && "!text-primary"}>
-                <Link href="/minify">Code Minify</Link>
-              </p>
-              <span>
-                <Link href="/minify">Code Minify</Link>
-              </span>
-            </li>
+            {navLink.map(({ title, id, link, badge }) => {
+              return (
+                <li className="relative pr-[45px]" key={id}>
+                  {badge ? (
+                    <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
+                      {badge}
+                      <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
 
-            {/* <li className="relative pr-[45px]">
-              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
-                NEW
-                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
-              </div>
-              <p
-              //   className={pathname === "/icons" && "!text-primary"}
-              >
-                <a href="/icons">Icons</a>
-              </p>
-              <span>
-                <a href="/icons">Icons</a>
-              </span>
-            </li> */}
-
-            <li className="relative pr-[45px]">
-              <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
-                NEW
-                <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
-              </div>
-              <p className={pathname === "/qr-genaretor" && "!text-primary"}>
-                <Link href="/qr-genaretor">QR Genaretor</Link>
-              </p>
-              <span>
-                <Link href="/qr-genaretor">QR Genaretor</Link>
-              </span>
-            </li>
+                  <p className={pathname === link ? "!text-primary" : ""}>
+                    <Link href={link}>{title}</Link>
+                  </p>
+                </li>
+              );
+            })}
           </ul>
         </div>
 

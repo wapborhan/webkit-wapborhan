@@ -254,3 +254,22 @@ export const componentsData = [
     ],
   },
 ];
+
+export const navLink = [
+  {
+    id: 1,
+    title: "Backgrounds",
+    link: "background",
+  },
+  {
+    id: 2,
+    title: "Code Minify",
+    link: "minify",
+    badge: "new",
+  },
+  {
+    id: 3,
+    title: "QR Genaretor",
+    link: "qr-genaretor",
+  },
+];

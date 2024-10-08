@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./index.css";
 
 import { Toaster } from "react-hot-toast";
 

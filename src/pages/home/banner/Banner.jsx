@@ -46,7 +46,7 @@ const Banner = () => {
             },
           }}
         >
-          <div className="w-[100px] h-[400px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[-150px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
+          <div className="w-[100px] 1040px:h-[400px] h-[100px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[-150px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
           <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-200px] animate-pulse opacity-30 left-8 blur-[70px] rotate-[-50deg]"></div>
           <Link href="https://github.com/wapborhan/webkit-wapborhan">
             <div
@@ -67,10 +67,10 @@ const Banner = () => {
 
           <motion.h1
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            className="text-[2.4rem] font-[600] 425px:text-[3rem] 640px:text-[2.8rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[1.25] text-text"
+            className="text-[2.4rem] font-[600] 425px:text-[2rem] 640px:text-[2.8rem] leading-[3rem] 425px:leading-[2.5rem] 640px:leading-[1.25] text-text"
           >
             <span className="heroText text-danger font-[500]">WeBKit</span> Free
-            Online Tools <br /> For Developers
+            Online <br /> Tools For Developers
           </motion.h1>
 
           <motion.div
@@ -96,7 +96,7 @@ const Banner = () => {
 
           <motion.p
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            className=" text-gray-500 w-full 425px:w-[80%] 640px:w-[91%] font-[400] text-[1.1rem]"
+            className=" text-gray-500 w-full font-[400] text-[1.1rem]"
           >
             WeBKit providing developers with free online tools. These tools
             include several formatters, validators, code minifiers, string
@@ -106,7 +106,7 @@ const Banner = () => {
             {/* templates, Icons, Color Palette */}
           </motion.p>
 
-          <motion.div
+          {/* <motion.div
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className="flex items-center justify-center gap-3 425px:gap-6 mt-8"
           >
@@ -122,9 +122,9 @@ const Banner = () => {
             >
               Components
             </Link>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+          {/* <motion.div
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className="flex items-center justify-center flex-wrap gap-x-[20px] 640px:gap-3 425px:gap-6 mt-6"
           >
@@ -152,7 +152,7 @@ const Banner = () => {
               <CountUp start={0} end={20} duration={5} delay={1}></CountUp>
               <p className="mb-1">+</p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </main>
