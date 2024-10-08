@@ -1,9 +1,16 @@
 import React, { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FaRegCopy } from "react-icons/fa";
 import { MdOutlineDone } from "react-icons/md";
 import toast from "react-hot-toast";
+
+import dynamic from "next/dynamic";
+
+const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter"), {
+  ssr: false,
+});
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const ShowCode = ({ code }) => {
   const [isCopy, setIsCopy] = useState(false);

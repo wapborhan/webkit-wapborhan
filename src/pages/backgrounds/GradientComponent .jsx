@@ -17,7 +17,6 @@ const GradientComponent = ({ index, name, css, tailwind, colors }) => {
   };
 
   return (
-    // Gradient Component
     <div
       className="group relative h-72 w-[22.5rem] rounded-2xl transition-all duration-150 md:hover:scale-105 border-[6px] border-[#010326]"
       key={index}
@@ -37,15 +36,16 @@ const GradientComponent = ({ index, name, css, tailwind, colors }) => {
         >
           <SiCss3 />
         </GradientCopyButton>
-        {colors.map((color, idx) => (
-          <GradientCopyButton
-            key={idx}
-            handleOnClick={() => copyCode(color, "Color")}
-            tooltipText="Copy Color"
-          >
-            <span className="text-sm uppercase font-semibold">{color}</span>
-          </GradientCopyButton>
-        ))}
+        {colors &&
+          colors.map((color, idx) => (
+            <GradientCopyButton
+              key={idx}
+              handleOnClick={() => copyCode(color, "Color")}
+              tooltipText="Copy Color"
+            >
+              <span className="text-sm uppercase font-semibold">{color}</span>
+            </GradientCopyButton>
+          ))}
       </div>
 
       {/* Name of the gradient. Note:- Hoping to add a like button to this same component in the future with justify-between to evenly space the Name on the left and the like button on the right.*/}

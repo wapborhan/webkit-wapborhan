@@ -29,8 +29,6 @@ const Banner = () => {
     });
   }, []);
 
-  const navigate = usePathname();
-
   return (
     <main className="w-full min-h-screens">
       <div className="flex 1024px:flex-row flex-col items-center justify-center text-center px-8 640px:px-12 640px:pl-12 mt-[1rem] 425px:mt-[1rem] ">
