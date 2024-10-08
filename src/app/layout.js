@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`next`}>
         <Toaster position="top-right" reverseOrder={false} />
         <div className="w-full max-w-[1615px] mx-auto">{children}</div>
       </body>

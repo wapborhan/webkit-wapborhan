@@ -229,26 +229,38 @@ aside ul a {
 
 /* sidebar component section header  */
 .sectionHeader {
-  color: #0471d6;
-  border-left: 1px solid #9caebc;
+  color: #d02b8e;
+  padding: 8px 5px 8px 30px !important;
 }
 
-.sectionHeader:hover {
-  background-color: transparent;
-  font-weight: 400;
-  border-left: 1px solid #9caebc;
+
+.sectionHeader::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 9.5px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  opacity: 1;
+  background: #d02b8e;
+
 }
 
 .sectionHeader::after {
   content: "";
-  background-color: #9caebc;
-  top: -1%;
-  left: -2.3%;
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #d02b8e;
+  top: 35%;
+  left: 5px;
   position: absolute;
   width: 10px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   height: 10px;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 
 /* home */
@@ -383,4 +395,27 @@ input[type="number"] {
 #bmc-iframe {
   right: 80px !important;
   bottom: 87px !important;
+}
+
+.sidemenu li a {
+  position: relative;
+  padding: 8px 5px 8px 30px !important;
+}
+
+
+.sidemenu li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 9.5px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  opacity: 1;
+  background: #d02b8e;
+}
+
+.sidemenu li a.active::before {
+  background: rgb(255 255 255 / var(--tw-bg-opacity));
 }
