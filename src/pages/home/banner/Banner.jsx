@@ -41,7 +41,10 @@ const Banner = () => {
         >
           <div className="w-[100px] 1040px:h-[400px] h-[100px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[50px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
           <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-200px] animate-pulse opacity-30 left-8 blur-[70px] rotate-[-50deg]"></div>
-          <Link href="https://github.com/wapborhan/webkit-wapborhan">
+          <Link
+            href="https://github.com/wapborhan/webkit-wapborhan"
+            target="__BLANK"
+          >
             <div
               className="gradient-border"
               data-aos="fade-zoom-in"
@@ -73,16 +76,16 @@ const Banner = () => {
             <div className="flex flex-wrap items-center justify-center gap-y-[10px] gap-x-[20px] 640px:gap-[20px]">
               <h3 className="text-[1.1rem] text-gray-600 font-[500]"></h3>
               <div className="flex items-center gap-[5px]">
-                <FaReact className="text-[1.4rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">ReactJS</p>
+                <FaReact className="text-[1.4rem] text-[#53b7d3]" />
+                <p className="text-[1.1rem] text-[#53b7d3]">ReactJS</p>
               </div>
               <div className="flex items-center gap-[5px]">
-                <FaVuejs className="text-[1.8rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">VueJS</p>
+                <FaVuejs className="text-[1.8rem] text-[#41b883]" />
+                <p className="text-[1.1rem] text-[#41b883]">VueJS</p>
               </div>
               <div className="flex items-center gap-[5px]">
-                <TbBrandNextjs className="text-[1.5rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">NextJS</p>
+                <TbBrandNextjs className="text-[1.5rem] text-black" />
+                <p className="text-[1.1rem] text-black">NextJS</p>
               </div>
             </div>
           </motion.div>
@@ -91,11 +94,10 @@ const Banner = () => {
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className=" text-gray-500 w-full font-[400] text-[1.1rem]"
           >
-            WeBKit providing developers with free online tools. These tools
-            include several formatters, validators, code minifiers, string
-            escapers, encoders and decoders, message digesters, web resources
-            and more. and also have some Tailwind CSS components for any needs.
-            Comes with UI examples & blocks, and more.
+            WeBKit offers free online tools for developers, including
+            formatters, code minifiers, encoders/decoders, string escapers,
+            message digesters, and web resources. It also provides Tailwind CSS
+            components with UI examples, blocks, and more.
             {/* templates, Icons, Color Palette */}
           </motion.p>
 

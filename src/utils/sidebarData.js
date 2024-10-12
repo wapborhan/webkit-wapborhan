@@ -257,19 +257,31 @@ export const componentsData = [
 
 export const navLink = [
   {
+    id: 0,
+    title: "Components",
+    link: "components",
+  },
+  {
     id: 1,
     title: "Backgrounds",
-    link: "background",
+    link: "backgrounds",
   },
   {
     id: 2,
-    title: "Code Minify",
-    link: "minify",
+    title: "Buttons",
+    link: "buttons",
     badge: "new",
   },
+
   {
     id: 3,
     title: "QR Genaretor",
     link: "qr-genaretor",
+  },
+  {
+    id: 4,
+    title: "Minify",
+    link: "minify",
+    badge: "new",
   },
 ];

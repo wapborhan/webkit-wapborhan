@@ -14,6 +14,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
   const pathname = usePathname();
+  const path = pathname.split("/").pop();
 
   const handleSearchClick = () => {
     setIsSearchOpen(true);
@@ -85,7 +86,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b border-gray-100 1024px:flex items-center justify-between w-full px-40 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3">
+      <nav className="border-b border-gray-100 1024px:flex items-center justify-between w-full px-32 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3">
         <div className="flex items-center gap-14 relative content-between">
           {pathname === "/" ? (
             <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-140px] opacity-30 left-0 blur-[70px] rotate-[-50deg]"></div>
@@ -110,22 +111,24 @@ const Navbar = () => {
             </Link>
           </div>
           <ul
-            className={`text-gray-600 navUl flex items-center gap-8 font-[500] capitalize text-[1.2rem]`}
+            className={`text-gray-600 navUl flex items-center gap-2 font-[500] capitalize text-[1.2rem]`}
           >
             {navLink.map(({ title, id, link, badge }) => {
               return (
-                <li className="relative pr-[45px]" key={id}>
+                <li className="relative pr-[35px]" key={id}>
                   {badge ? (
-                    <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0">
+                    <div className="bg-primary rounded-[2px] text-white animate-pulse text-[0.4rem] px-2 py-0.5 w-max absolute top-[3px] z-50 right-0">
                       {badge}
-                      <div className="w-[8px] h-[8px] bg-primary rotate-[45deg] absolute left-[-4px] top-[0.229rem]"></div>
+                      <div className="w-[5px] h-[5px] bg-primary rotate-[45deg] absolute left-[-2px] top-[0.229rem]"></div>
                     </div>
                   ) : (
                     ""
                   )}
 
-                  <p className={pathname === link ? "!text-primary" : ""}>
-                    <Link href={link}>{title}</Link>
+                  <p
+                    className={`${path === link ? "text-primary hover:text-danger" : ""} hover:text-primary`}
+                  >
+                    <Link href={`/${link}`}>{title}</Link>
                   </p>
                 </li>
               );
@@ -133,7 +136,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex items-end gap-2 w-[30%]">
+        <div className="flex items-end gap-2 w-[15%]">
           {/* <div
             className="zenuiSearchInput relative w-full"
             onClick={handleSearchClick}
