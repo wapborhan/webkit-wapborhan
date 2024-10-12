@@ -3,27 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 
-
-
-/* html,
-body {
-  border-color: #736b5e !important;
-  color: #e8e6e3;
-}
-
-html,
-body {
-  background-color: #181a1b;
-}
-
-html {
-  color-scheme: dark !important;
-}
-
-html {
-  background-color: #181a1b !important;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +16,8 @@ html {
 }
 
 *::selection {
-  background-color: rgb(208 43 142 / 1);
   color: #fff;
+  @apply bg-primary
 }
 
 *::-webkit-scrollbar {
@@ -51,8 +30,8 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(208 43 142 / 1);
   border-radius: 30px;
+  @apply bg-primary
 }
 
 .heroText {
@@ -154,7 +133,6 @@ html {
 /* button hover effect */
 .buttonSecondary::after {
   content: "";
-  background-color: #3b9df8;
   top: 0;
   left: 0;
   position: absolute;
@@ -163,6 +141,7 @@ html {
   z-index: -1;
   transform: translateX(-300px);
   transition: all 0.3s ease-in-out;
+  @apply bg-primary
 }
 
 .buttonSecondary:hover::after {
@@ -205,7 +184,7 @@ html {
 .footer li:hover span {
   opacity: 1;
   transform: translateY(0px);
-  color: #0FABCA;
+  @apply text-primary
 }
 
 /* sidebar hover effect */
@@ -229,8 +208,8 @@ aside ul a {
 
 /* sidebar component section header  */
 .sectionHeader {
-  color: #d02b8e;
   padding: 8px 5px 8px 30px !important;
+  @apply text-primary
 }
 
 
@@ -244,15 +223,13 @@ aside ul a {
   height: 100%;
   width: 2px;
   opacity: 1;
-  background: #d02b8e;
-
+  @apply bg-primary
 }
 
 .sectionHeader::after {
   content: "";
   background-color: #fff;
   border: 2px solid;
-  border-color: #d02b8e;
   top: 35%;
   left: 5px;
   position: absolute;
@@ -261,6 +238,7 @@ aside ul a {
   height: 10px;
   transition: all 0.3s ease-in-out;
   z-index: 2;
+  @apply border-primary
 }
 
 /* home */
@@ -336,7 +314,7 @@ aside ul a {
 .gradient-border {
   position: relative;
   padding: 2px;
-  background: linear-gradient(90deg, #DB06F9 0%, rgba(0, 204, 255, 1) 100%);
+  background: linear-gradient(90deg, #e00108 0%, #119c52 100%);
   border-radius: 9999px;
   display: inline-block;
   overflow: hidden;
@@ -387,7 +365,7 @@ input[type="number"] {
 }
 
 #bmc-wbtn {
-  background-color: #2a8bff !important;
+  @apply bg-primary;
   width: 58px !important;
   height: 58px !important;
 }
@@ -413,7 +391,7 @@ input[type="number"] {
   height: 100%;
   width: 2px;
   opacity: 1;
-  background: #d02b8e;
+  @apply bg-primary
 }
 
 .sidemenu li a.active::before {

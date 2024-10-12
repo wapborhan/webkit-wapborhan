@@ -1,5 +1,5 @@
-import MobileNavbar from "@/layout/header/MobileNavbar";
-import Navbar from "@/layout/header/Navbar";
+import MobileNavbar from "@/components/layout/header/MobileNavbar";
+import Navbar from "@/components/layout/header/Navbar";
 
 const layout = ({ children }) => {
   return (

@@ -1,6 +1,6 @@
-import Sidebar from "@/layout/sidebar/Sidebar";
+import Sidebar from "@/components/layout/sidebar/Sidebar";
 import "@/app/globals.css";
-import Navbar from "@/layout/header/Navbar";
+import Navbar from "@/components/layout/header/Navbar";
 
 const layout = ({ children }) => {
   return (

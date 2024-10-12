@@ -1,6 +1,6 @@
-import Sidebar from "@/layout/sidebar/Sidebar";
+import Sidebar from "@/components/layout/sidebar/Sidebar";
 import "@/app/globals.css";
-import Navbar from "@/layout/header/Navbar";
+import Navbar from "@/components/layout/header/Navbar";
 
 export const metadata = {
   title: "Components",
@@ -20,7 +20,7 @@ const layout = ({ children }) => {
 
         <div
           className="w-full max-h-[89vh] min-h-[89vh] overflow-y-auto pt-[5rem] 640px:pt-[5rem] 640px:py-[10rem] 1024px:py-[2rem] 1024px:px-[0.5rem] relative"
-          style={{ scrollbarWidth: "none" }}
+          // style={{ scrollbarWidth: "none" }}
         >
           {/* <MobileSidebar startContent={0} /> */}
           {children}

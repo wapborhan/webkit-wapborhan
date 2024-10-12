@@ -2,6 +2,7 @@
 
 /old
 /old-zenui
+.env
 
 # dependencies
 /node_modules

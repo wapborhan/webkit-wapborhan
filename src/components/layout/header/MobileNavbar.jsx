@@ -57,10 +57,10 @@ const MobileNavbar = () => {
               v2.0
             </span>
             <Image
-              src="/darklogo.png"
+              src="/footer_logo.png"
               alt="logo"
-              width={100}
-              height={50}
+              width={150}
+              height={80}
               className="w-[60px] 1024px:w-[70px] z-20 cursor-pointer"
             />
           </Link>

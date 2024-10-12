@@ -6,14 +6,7 @@ import { FaRegCopy } from "react-icons/fa";
 import { MdOutlineDone } from "react-icons/md";
 import toast from "react-hot-toast";
 
-// import dynamic from "next/dynamic";
-
-// const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter"), {
-//   ssr: false,
-// });
-// import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
-const ShowCode = ({ code }) => {
+const InstallCode = ({ code, height }) => {
   const [isCopy, setIsCopy] = useState(false);
 
   // copy to clipboard
@@ -39,7 +32,7 @@ const ShowCode = ({ code }) => {
       </div>
       <SyntaxHighlighter
         language="jsx"
-        className="syntax-highlighter text-[14px] max-h-[300px] 4 max-w-full"
+        className={`syntax-highlighter text-[14px] max-h-[${height}] 4 max-w-full`}
         style={dracula}
         showLineNumbers
         wrapLines={false}
@@ -51,4 +44,4 @@ const ShowCode = ({ code }) => {
   );
 };
 
-export default ShowCode;
+export default InstallCode;

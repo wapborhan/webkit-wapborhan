@@ -101,7 +101,12 @@ const Navbar = () => {
               className="w-[70px] cursor-pointer z-10"
             /> */}
             <Link href="/">
-              <Image src="/darklogo.png" alt="WebKit" width={60} height={30} />
+              <Image
+                src="/footer_logo.png"
+                alt="WebKit"
+                width={120}
+                height={70}
+              />
             </Link>
           </div>
           <ul

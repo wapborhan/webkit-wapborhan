@@ -4,14 +4,12 @@ import React from "react";
 const page = () => {
   return (
     <aside className="w-full 640px:pl-[2.5rem] px-6 640px:px-10">
-      <h1 className="font-[600] pt-0 text-[#0471d6] text-[2.5rem] 1024px:text-[3rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#3B9DF8] to-[#1A1674]">
-        WeBKit Library
+      <h1 className="font-[600] pt-0  text-[2.5rem] 1024px:text-[3rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-danger to-primary">
+        WeBkit UI
       </h1>
       <p className="w-full text-text text-[1rem]">
-        WeBKit is your ultimate destination for a comprehensive collection of UI
-        components and designs, all available for free. Whether {"you're"}{" "}
-        building a website from scratch or enhancing an existing one, WeBKit has
-        everything you need to bring your vision to life.
+        WeBKit is an open-source component list that implements your website.
+        {"It's"} comprehensive and can be used in production out of the box.
       </p>
 
       <div className="mt-8 w-full text-text">

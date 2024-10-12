@@ -1,21 +1,14 @@
 "use client";
 import { useEffect } from "react";
-
-// react icons
+import Link from "next/link";
+import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { CgTemplate } from "react-icons/cg";
-import { FaFire, FaReact } from "react-icons/fa";
-import { BiLogoTailwindCss } from "react-icons/bi";
+import { FaFire, FaReact, FaVuejs } from "react-icons/fa";
 import { TbBrandNextjs, TbIcons } from "react-icons/tb";
 import { LuLayoutTemplate } from "react-icons/lu";
-// import aos animation
-import "aos/dist/aos.css";
-import AOS from "aos";
-
-import { motion } from "framer-motion";
-
-import { usePathname } from "next/navigation.js";
 import CountUp from "react-countup";
-import Link from "next/link";
 
 const Banner = () => {
   const FADE_DOWN_ANIMATION_VARIANTS = {
@@ -46,7 +39,7 @@ const Banner = () => {
             },
           }}
         >
-          <div className="w-[100px] 1040px:h-[400px] h-[100px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[-150px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
+          <div className="w-[100px] 1040px:h-[400px] h-[100px] bg-[#96E8F8] absolute opacity-50 640px:opacity-100 bottom-[0px] 640px:bottom-[50px] right-12 blur-[70px] rotate-[-60deg] animate-pulse"></div>
           <div className="w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-200px] animate-pulse opacity-30 left-8 blur-[70px] rotate-[-50deg]"></div>
           <Link href="https://github.com/wapborhan/webkit-wapborhan">
             <div
@@ -58,7 +51,7 @@ const Banner = () => {
             >
               <div className="px-4 w-fit mx-auto text-[0.6rem] 1024px:py-1.5 backdrop-blur-md rounded-full 1024px:text-[0.9rem] font-[500] flex items-center gap-2">
                 <FaFire className="text-[0.8rem] 1024px:text-[1.3rem] text-red-500" />
-                <p className="bg-gradient-to-r from-[#FF0096FF] to-[#00CCFFFF] bg-clip-text text-transparent">
+                <p className="bg-gradient-to-r from-danger to-primary bg-clip-text text-transparent">
                   Star us on Github
                 </p>
               </div>
@@ -81,15 +74,15 @@ const Banner = () => {
               <h3 className="text-[1.1rem] text-gray-600 font-[500]"></h3>
               <div className="flex items-center gap-[5px]">
                 <FaReact className="text-[1.4rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">React</p>
+                <p className="text-[1.1rem] text-gray-500">ReactJS</p>
               </div>
-              {/* <div className="flex items-center gap-[5px]">
-                <BiLogoTailwindCss className="text-[1.8rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">Tailwind CSS</p>
-              </div> */}
+              <div className="flex items-center gap-[5px]">
+                <FaVuejs className="text-[1.8rem] text-gray-500" />
+                <p className="text-[1.1rem] text-gray-500">VueJS</p>
+              </div>
               <div className="flex items-center gap-[5px]">
                 <TbBrandNextjs className="text-[1.5rem] text-gray-500" />
-                <p className="text-[1.1rem] text-gray-500">Next JS</p>
+                <p className="text-[1.1rem] text-gray-500">NextJS</p>
               </div>
             </div>
           </motion.div>
@@ -106,7 +99,7 @@ const Banner = () => {
             {/* templates, Icons, Color Palette */}
           </motion.p>
 
-          {/* <motion.div
+          <motion.div
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className="flex items-center justify-center gap-3 425px:gap-6 mt-8"
           >
@@ -122,15 +115,15 @@ const Banner = () => {
             >
               Components
             </Link>
-          </motion.div> */}
+          </motion.div>
 
-          {/* <motion.div
+          <motion.div
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             className="flex items-center justify-center flex-wrap gap-x-[20px] 640px:gap-3 425px:gap-6 mt-6"
           >
             <div
               title="Components"
-              className="flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-primary to-danger bg-clip-text text-transparent"
+              className="flex items-center gap-[1px] 1024px:text-[2.4rem] text-[1.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-primary to-danger bg-clip-text text-transparent"
             >
               <LuLayoutTemplate className="text-[2rem] 640px:text-[2.2rem] text-danger mr-1.5" />
               <CountUp start={0} end={600} duration={5} delay={1}></CountUp>
@@ -138,7 +131,7 @@ const Banner = () => {
             </div>
             <div
               title="Icons"
-              className="flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-danger to-primary bg-clip-text text-transparent"
+              className="flex items-center gap-[1px] 1024px:text-[2.4rem] text-[1.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-danger to-primary bg-clip-text text-transparent"
             >
               <TbIcons className="text-[2rem] 640px:text-[2.2rem] text-primary mr-1.5" />
               <CountUp start={0} end={500} duration={5} delay={1}></CountUp>
@@ -146,13 +139,13 @@ const Banner = () => {
             </div>
             <div
               title="Templates"
-              className="flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-primary to-danger bg-clip-text text-transparent"
+              className="flex items-center gap-[1px] 1024px:text-[2.4rem] text-[1.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-primary to-danger bg-clip-text text-transparent"
             >
               <CgTemplate className="text-[2rem] 640px:text-[2.4rem] text-danger mr-1.5" />
               <CountUp start={0} end={20} duration={5} delay={1}></CountUp>
               <p className="mb-1">+</p>
             </div>
-          </motion.div> */}
+          </motion.div>
         </motion.div>
       </div>
     </main>
