@@ -9,20 +9,21 @@ const Contex = ({ data }) => {
       <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
         CONTENTS
       </h2>
-      {data.map(({ headText, headId, id }) => {
-        return (
-          <a
-            href={`#${headId}`}
-            key={id}
-            className={`${
-              contentActiveTab === id && "!text-primary !border-primary"
-            } text-[0.9rem] text-text border-l border-transparent pl-4 capitalize`}
-            onClick={() => setContentActiveTab(id)}
-          >
-            {headText}
-          </a>
-        );
-      })}
+      {data &&
+        data.map(({ headText, headId, id }) => {
+          return (
+            <a
+              href={`#${headId}`}
+              key={id}
+              className={`${
+                contentActiveTab === id && "!text-primary !border-primary"
+              } text-[0.9rem] text-text border-l border-transparent pl-4 capitalize`}
+              onClick={() => setContentActiveTab(id)}
+            >
+              {headText}
+            </a>
+          );
+        })}
     </div>
   );
 };
