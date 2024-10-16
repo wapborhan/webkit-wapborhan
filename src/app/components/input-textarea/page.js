@@ -1,6 +1,6 @@
-import List from "./List";
 import { componentData } from "./data";
 import Contex from "@/pages/component/Contex";
+import List from "./List";
 
 const Index = () => {
   return (

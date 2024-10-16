@@ -22,7 +22,12 @@ const GradientComponent = ({ index, name, css, tailwind, colors }) => {
       key={index}
       // style={{ background: css }}
     >
-      <button className="px-16 py-4 rounded-lg" style={{ background: css }}>
+      <button
+        className="px-16 py-4 rounded-lg button-hov"
+        style={{
+          background: css,
+        }}
+      >
         {name}
       </button>
       {/* component containing buttons to copy code, colors of the gradient */}

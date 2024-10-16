@@ -284,4 +284,10 @@ export const navLink = [
     link: "minify",
     badge: "new",
   },
+  {
+    id: 5,
+    title: "Glass Morphism",
+    link: "glass-morphism",
+    badge: "new",
+  },
 ];

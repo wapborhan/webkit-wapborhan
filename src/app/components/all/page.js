@@ -10,10 +10,9 @@ const Page = () => {
       </div>
       {componentsData.map((item) => {
         return (
-          <>
+          <div key={item.id}>
             <div
               className={`sectionHeaders  tracking-widest font-[500] hover:font-[500] relative uppercase !text-[1rem] text-primary border-b mt-10 mb-3`}
-              key={item.id}
             >
               {item.name}
             </div>
@@ -33,7 +32,7 @@ const Page = () => {
                 );
               })}
             </div>
-          </>
+          </div>
         );
       })}
     </div>

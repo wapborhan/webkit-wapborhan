@@ -397,3 +397,22 @@ input[type="number"] {
 .sidemenu li a.active::before {
   background: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+
+button.button-hov {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto !important;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+button.button-hov:hover {
+  background-position: right center !important;
+  color: #fff;
+  text-decoration: none;
+}

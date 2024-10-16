@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------- VARIABLES ------- */
+:root {
+  --bgcolor: #0F0B21;
+  --purple: #7269FF;
+  --darkpurple: #221C44;
+  --text-principal: white;
+  --text-secondary: #7F78A7;
+  --font-principal: 'Roboto', sans-serif;
+}
+
+
+/* ------- BODY ------- */
+body {
+  height: 100%;
+
+}
+
+
+/* ------- HEADER ------- */
+header {
+  /*  width: 100vw; */
+  height: 55px;
+  background-color: var(--purple);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header__logo {
+  width: 214px;
+  height: 30px;
+  /* background: url(../images/glass-generator-logo.svg) no-repeat center center; */
+}
+
+
+
+
+/* ------- HERO SECTION ------- */
+.hero {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s all linear;
+}
+
+.arrows {
+  width: 60px;
+  height: 60px;
+  margin: 0 35px;
+  cursor: pointer;
+}
+
+.left {
+  background: url('/images/arrow-left.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.left:hover {
+  left: calc(100% - 2.5px);
+  transform: translateX(-8%);
+  transition: 0.4s ease all;
+}
+
+.right {
+  background: url('/images/arrow-right.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.right:hover {
+  left: calc(100% - 2.5px);
+  transform: translateX(8%);
+  transition: 0.4s ease all;
+}
+
+.glass-container {
+  width: 700px;
+  height: 350px;
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  border: 2px solid white;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.glass-container__profile {
+  width: 200px;
+  height: 200px;
+  background: url('/images/profile-04.png') no-repeat center center;
+  background-size: cover;
+}
+
+.visibility__profile {
+  transition: opacity 0.40s ease-in-out;
+  opacity: 0.0;
+  /* transition: 0.2s ease all; */
+  /* visibility: hidden; */
+}
+
+.glass-container__text {
+  width: 370px;
+  height: 200px;
+  /* padding: 40px; */
+  /* border: 1px red solid; */
+}
+
+.visibility__text {
+  transition: opacity 0.40s ease-in-out;
+  opacity: 0.0;
+  /*   visibility: hidden; */
+}
+
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#lorem_text {
+  text-align: justify;
+}
+
+#lorem_text,
+#glass_title {
+  text-shadow: 0px 0px 5px black, 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ------- CONTROLS SECTION ------- */
+.controls-section {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-container {
+  width: 90%;
+  height: 200px;
+  position: relative;
+  background-color: var(--darkpurple);
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+
+}
+
+/* ------ RANGE INPUTS CONTAINER ------ */
+.controls__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 0px;
+  /*     border: 1px red solid; */
+}
+
+.control__input-info {
+  width: 150px;
+  font-weight: 600;
+  margin: 0px 10px;
+  margin-bottom: 25px;
+  /* border: 1px orange solid; */
+}
+
+/* ------ RANGE INPUTS ------ */
+
+input[type="range"] {
+  width: 100%;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 5px;
+  width: 20%;
+  height: 8px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -6px;
+  width: 20px;
+  height: 20px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #847dff;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 10.8px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 31px;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 7.6px 0;
+  color: transparent;
+  width: 100%;
+  height: 10.8px;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #5449ff;
+  border: 0;
+  border-radius: 21.2px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 21.2px;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 31px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #6c63ff;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #847dff;
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type="range"] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+
+
+
+/* ------ INFORMATION TEXT OF RANGE INPUTS ------ */
+.range_data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range_data--text {
+  color: var(--text-secondary);
+  font-size: .75rem;
+  margin-bottom: -5px;
+}
+
+
+
+/* ------ BACKGROUND IMAGE INPUT ------ */
+#bgInput {
+  height: 23px;
+  color: var(--text-secondary);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
+  padding-left: 5px;
+}
+
+#bgInput:focus {
+  color: white;
+  outline: none;
+}
+
+
+/* ------ GLASS COLOR INPUTS ------ */
+.glass_color_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visual_color_input {
+  width: 100px;
+  height: 35px;
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
+}
+
+.visual_color_input:hover {
+  cursor: pointer;
+}
+
+.visual_color_input:focus {
+  outline: none;
+}
+
+.text_input_color {
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
+  text-transform: uppercase;
+}
+
+.text_input_color:focus {
+  outline: none;
+  color: white;
+}
+
+/* ------ SWITCH INPUTS ------ */
+.switchs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.switch {
+  color: var(--text-secondary);
+  width: 60px;
+  height: 25px;
+  border: 1px solid var(--purple);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  font-size: 0.60rem;
+  background: var(--bgcolor);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.switch::after {
+  top: 2px;
+  right: 1px;
+  content: "";
+  left: unset;
+  width: 28px;
+  height: 19px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  background: var(--purple);
+  transition: 0.3s ease all;
+}
+
+.container__button-switch {
+  display: flex;
+  align-items: center;
+}
+
+.active__image::after {
+  right: unset;
+  left: 0;
+  content: "";
+}
+
+.active__text::after {
+  right: unset;
+  left: 0;
+  content: "";
+}
+
+.switch_name {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+
+/* ------ CODE GENERATOR BUTTON ------ */
+.generator_button {
+  /* display: block; */
+  width: 150px;
+  height: 50px;
+  border: 0px solid var(--purple);
+  border-radius: 10px;
+  background-color: var(--purple);
+
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 75px);
+  color: white;
+  cursor: pointer;
+
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generator_button:hover {
+  box-shadow: 0 0 10px #7369ff79;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.generator_button:focus {
+  outline: none;
+}
+
+.generator_button--uptext {
+  color: var(--bgcolor);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.generator_button--codetext {
+  font-size: 0.5rem;
+}
+
+/* ------- MODAL CONTAINER ------- */
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all .4s;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  /* height: 420px; */
+  /* max-width: 90%; */
+  background: var(--darkpurple);
+  border: 2px solid var(--purple);
+  padding: 25px;
+  color: #0F0B21;
+  /* border: 1px red solid; */
+}
+
+.code_text {
+  width: 470px;
+  height: auto;
+  border-radius: 5px;
+  /* border: 1px red solid; */
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background-color: var(--bgcolor);
+  padding: 15px;
+  display: block;
+  /* margin-top: -10px; */
+}
+
+.css {
+  width: 470px;
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.code_title {
+  color: var(--purple);
+  text-shadow: 1px 1.5px 2px black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  /* margin-bottom: -50px; */
+  /* border: 1px red solid; */
+}
+
+.thanks_text {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.modal__close:hover {
+  color: var(--purple);
+  font-weight: bolder;
+}
+
+/* 
+pre{
+height: 100px;
+border: 1px red solid
+} */
+
+
+
+
+
+
+/* ------- BOTONES COPY ------- */
+.button_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  /*   border: 1px red solid; */
+  position: relative;
+}
+
+.button_copy {
+  color: white;
+  font-weight: 900;
+  /* width: 50px; */
+  padding: 0 10px;
+  height: 30px;
+  border: 0px solid var(--purple);
+  border-radius: 3px;
+  background-color: var(--purple);
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+}
+
+.button_copy:hover {
+  box-shadow: 0 0 10px #7369ff79;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+
+/* ------ RESPONSIVE CONFIGURATION ------ */
+/* ------ RESPONSIVE CONFIGURATION ------ */
+/* ------ RESPONSIVE CONFIGURATION ------ */
+
+@media (max-width: 900px) {
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 150px;
+    background-size: contain;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 60vh;
+    background: var(--darkpurple);
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+  }
+
+  /* ------ GLASS BOX ------ */
+  .glass-container {
+    width: 75vw;
+    height: 60%;
+    margin: 10px;
+  }
+
+  .glass-container__text,
+  .glass-container__profile {
+    display: none;
+  }
+
+  /* ------ ARROW CONTROLS ------ */
+  .arrows {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+  }
+
+
+
+  /* ------ CONTROLS INPUT ------ */
+  .controls-container {
+    width: 58vw;
+    height: 23vh;
+    /* min-height: 200px; */
+    margin-top: -15px;
+    /* border: 1px red solid; */
+  }
+
+  .controls__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 10px 0 10px;
+    padding-bottom: 0px;
+  }
+
+  .control__input-info {
+    width: 160px;
+    font-weight: 500;
+    margin: 0px 10px;
+    margin-bottom: 25px;
+  }
+
+  .control__input-info p {
+    font-weight: 500;
+    font-size: .85rem;
+  }
+
+  .switchs {
+    display: none;
+  }
+
+
+  /* ------ BACKGROUND IMAGE INPUT ------ */
+  #bgInput {
+    width: 100%;
+  }
+
+  /* ------- MODAL CONTAINER ------- */
+  .modal__content {
+    width: 80vw;
+    padding: 20px;
+    /* border: 2px green solid; */
+  }
+
+  .code_text {
+    width: 76vw;
+    font-size: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .button_copy {
+    position: absolute;
+    right: -2px;
+    bottom: -12px;
+  }
+
+  .css {
+    width: 72vw;
+  }
+
+  .thanks_text {
+    font-size: 0.80rem;
+  }
+
+  .coffee {
+    width: 100px;
+    /* background: url('../images/bmc-full-logo.svg') white no-repeat center; */
+    background-size: 100px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-right: 30px;
+    /* border: 1px red solid; */
+  }
+
+  @media (max-width: 680px) {
+    .hero {
+      height: 60vh;
+    }
+
+    .controls-container {
+      width: 88vw;
+      height: auto;
+      padding-bottom: 20px;
+    }
+
+    .control__input-info {
+      width: 160px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .hero {
+      height: 45vh;
+    }
+
+    .controls-container {
+      width: 88vw;
+      min-width: 350px;
+      height: auto;
+      padding-bottom: 20px;
+    }
+
+    .control__input-info {
+      width: 130px;
+    }
+
+  }
+}
