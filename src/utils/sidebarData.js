@@ -270,7 +270,6 @@ export const navLink = [
     id: 2,
     title: "Buttons",
     link: "buttons",
-    badge: "new",
   },
 
   {
@@ -282,7 +281,6 @@ export const navLink = [
     id: 4,
     title: "Minify",
     link: "minify",
-    badge: "new",
   },
   {
     id: 5,
@@ -292,7 +290,12 @@ export const navLink = [
   },
   {
     id: 6,
-    title: "Neumorphism",
-    link: "https://neumorphism.io/#e7e4e4",
+    title: "Age Calculator",
+    link: "age-calculator",
   },
+  // {
+  //   id: 6,
+  //   title: "Neumorphism",
+  //   link: "https://neumorphism.io/#e7e4e4",
+  // },
 ];
