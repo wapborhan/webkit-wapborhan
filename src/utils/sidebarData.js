@@ -290,4 +290,9 @@ export const navLink = [
     link: "glass-morphism",
     badge: "new",
   },
+  {
+    id: 6,
+    title: "Neumorphism",
+    link: "https://neumorphism.io/#e7e4e4",
+  },
 ];
