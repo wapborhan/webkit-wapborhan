@@ -102,20 +102,22 @@ function AgeCalculator() {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1 className="text-3xl font-bold my-5">Age Calculator</h1>
 
-      <div className="border  w-10/12 mx-auto p-5 ">
+      <div className="border  lg:w-10/12 w-full mx-auto lg:p-5 p-2">
         <div className="border">
           <h1>Calculate Your Age To Given Date</h1>
         </div>
-        <div className="flex gap-5">
+        <div className="flex 1024px:flex-row 640px:flex-row flex-col gap-5">
           <div className="form flex-1">
             {/* FROM DATE */}
-            <div className="grid grid-cols-4 gap-5 my-5">
-              <h2 className="text-xl">From Date</h2>
+            <div className="grid 1024px:grid-cols-4 grid-cols-4 1024px:gap-5 gap-1 my-5">
+              <h2 className="text-xl 1024px:col-span-1 col-span-4">
+                From Date
+              </h2>
               <select
                 value={fromDay}
                 onChange={(e) => setFromDay(e.target.value)}
                 style={{ padding: "5px" }}
-                className="border rounded-md"
+                className="border rounded-md 1024px:col-span-1 col-span-1"
               >
                 <option value="" disabled>
                   Day
@@ -131,7 +133,7 @@ function AgeCalculator() {
                 value={fromMonth}
                 onChange={(e) => setFromMonth(e.target.value)}
                 style={{ padding: "5px" }}
-                className="border rounded-md"
+                className="border rounded-md  1024px:col-span-1 col-span-2"
               >
                 <option value="" disabled>
                   Month
@@ -151,19 +153,20 @@ function AgeCalculator() {
                 onChange={(e) => setFromYear(e.target.value)}
                 placeholder="YYYY"
                 style={{ padding: "5px" }}
-                className="border rounded-md"
+                className="border rounded-md  1024px:col-span-1 col-span-1"
               />
             </div>
             {/* TO DATE (defaults to today) */}
             <div style={{ margin: "20px 0" }} className="flex gap-5">
-              <div className="grid grid-cols-4 gap-5 my-5">
-                {" "}
-                <h2 className="text-xl">To Date</h2>
+              <div className="grid 1024px:grid-cols-4 grid-cols-4 1024px:gap-5 gap-1 my-5">
+                <h2 className="text-xl 1024px:col-span-1 col-span-4">
+                  To Date
+                </h2>
                 <select
                   value={toDay}
                   onChange={(e) => setToDay(e.target.value)}
                   style={{ padding: "5px" }}
-                  className="border rounded-md"
+                  className="border rounded-md 1024px:col-span-1 col-span-1"
                 >
                   <option value="" disabled>
                     Day
@@ -178,7 +181,7 @@ function AgeCalculator() {
                   value={toMonth}
                   onChange={(e) => setToMonth(e.target.value)}
                   style={{ padding: "5px" }}
-                  className="border rounded-md"
+                  className="border rounded-md 1024px:col-span-1 col-span-2"
                 >
                   <option value="" disabled>
                     Month
@@ -197,26 +200,28 @@ function AgeCalculator() {
                   onChange={(e) => setToYear(e.target.value)}
                   placeholder="YYYY"
                   style={{ padding: "5px" }}
-                  className="border rounded-md"
+                  className="border rounded-md 1024px:col-span-1 col-span-1"
                 />
               </div>
             </div>
-            <button
-              onClick={calculateDuration}
-              style={{ marginTop: "20px", padding: "10px 20px" }}
-              className="bg-blue-500 text-white rounded-md"
-            >
-              Calculate Duration
-            </button>{" "}
-            <button
-              onClick={resetAge}
-              style={{ marginTop: "20px", padding: "10px 20px" }}
-              className="bg-blue-500 text-white rounded-md"
-            >
-              Reset Result
-            </button>
+            <div className="flex justify-around items-center ">
+              <button
+                onClick={calculateDuration}
+                style={{ marginTop: "20px", padding: "10px 20px" }}
+                className="bg-blue-500 text-white rounded-md"
+              >
+                Calculate
+              </button>
+              <button
+                onClick={resetAge}
+                style={{ marginTop: "20px", padding: "10px 20px" }}
+                className="bg-blue-500 text-white rounded-md"
+              >
+                Reset
+              </button>
+            </div>
           </div>
-          <div className="result text-start flex-1">
+          <div className="result text-start flex-1 1024px:mb-0 mb-10">
             {age && (
               <div style={{ marginTop: "20px" }} className="space-y-2">
                 <h2>Age:</h2>

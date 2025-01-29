@@ -84,7 +84,7 @@ const MobileNavbar = () => {
 
       {/*  sidebar  */}
       <aside
-        className={`${sidebarOpen ? "translate-x-0 opacity-100 z-50" : "translate-x-[200px] opacity-0 z-[-1]"} fixed top-[69px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] block 1024px:hidden 425px:w-[60%] h-screen transition-all duration-500 bg-white toastshadow`}
+        className={`${sidebarOpen ? "translate-x-0 opacity-100 z-50" : "1024px:translate-x-[300px] translate-x-[600px] opacity-0 z-[-1]"} fixed top-[62px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] block 1024px:hidden 425px:w-[60%] h-screen transition-all duration-500 bg-white toastshadow`}
       >
         {/* <div
           className="zenuiSearchInput relative w-full"
